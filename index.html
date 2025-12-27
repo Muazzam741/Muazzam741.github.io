@@ -5,17 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Muazzam Ali | Backend Engineer — GenAI Specialist</title>
   <meta name="description" content="Muazzam Ali — Backend Engineer & GenAI Specialist. Django/DRF, PostgreSQL optimization, Redis caching/rate limiting, RAG + agentic workflows." />
-  <meta name="theme-color" content="#09090b" />
+  <meta name="theme-color" content="#0b1220" />
 
   <!-- Tailwind via Play CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
 
   <style>
+    /* Lighter "dark" theme (navy + zinc), still modern */
     :root { color-scheme: dark; }
-    body { background: #09090b; } /* zinc-950 */
+    body { background: #0b1220; } /* slightly lighter than zinc-950 */
 
     .glass {
-      background: rgba(24,24,27,0.72);          /* zinc-900 */
+      background: rgba(24, 24, 27, 0.60);   /* zinc-900 */
       border: 1px solid rgba(255,255,255,0.10);
       backdrop-filter: blur(14px);
     }
@@ -23,11 +24,12 @@
     .soft-shadow {
       box-shadow:
         0 0 0 1px rgba(255,255,255,0.06),
-        0 28px 90px rgba(0,0,0,0.55);
+        0 22px 70px rgba(0,0,0,0.45);
     }
 
+    /* Modern accent gradient */
     .grad-text {
-      background: linear-gradient(90deg, #818cf8, #a78bfa); /* indigo-400 -> violet-400 */
+      background: linear-gradient(90deg, #93c5fd, #a78bfa); /* blue-300 -> violet-400 */
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
@@ -38,12 +40,16 @@
         linear-gradient(to right, rgba(255,255,255,0.06) 1px, transparent 1px),
         linear-gradient(to bottom, rgba(255,255,255,0.06) 1px, transparent 1px);
       background-size: 64px 64px;
-      mask-image: radial-gradient(ellipse at top, rgba(0,0,0,0.95), transparent 70%);
-      opacity: .18;
+      mask-image: radial-gradient(ellipse at top, rgba(0,0,0,0.92), transparent 70%);
+      opacity: .16;
     }
 
     .ring-soft { box-shadow: 0 0 0 1px rgba(255,255,255,0.08); }
-    ::selection { background: rgba(129,140,248,0.28); } /* indigo */
+    ::selection { background: rgba(147,197,253,0.26); } /* blue */
+
+    /* Make "linked cards" feel clickable */
+    .card-link { display: block; }
+    .card-link:focus-visible { outline: 2px solid rgba(147,197,253,0.8); outline-offset: 3px; border-radius: 24px; }
   </style>
 </head>
 
@@ -53,7 +59,7 @@
   <div class="fixed inset-0 -z-10 grid-lines"></div>
 
   <!-- NAV -->
-  <header class="sticky top-0 z-50 border-b border-white/10 bg-black/30 backdrop-blur-xl">
+  <header class="sticky top-0 z-50 border-b border-white/10 bg-black/25 backdrop-blur-xl">
     <div class="mx-auto max-w-6xl px-5 py-4 flex items-center justify-between">
       <a href="#top" class="font-semibold tracking-tight text-white/90 hover:text-white">
         Muazzam<span class="text-white/40">.dev</span>
@@ -353,51 +359,63 @@
     </div>
   </section>
 
-  <!-- PROJECTS -->
+  <!-- PROJECTS (clickable cards -> GitHub profile) -->
   <section id="projects" class="py-10">
     <div class="mx-auto max-w-6xl px-5">
       <p class="text-xs uppercase tracking-[0.22em] text-white/50">Build</p>
       <h2 class="mt-2 text-2xl md:text-3xl font-semibold">Projects</h2>
 
       <div class="mt-6 grid md:grid-cols-3 gap-4">
-        <article class="glass soft-shadow rounded-3xl p-6 border border-white/10 proj-card">
-          <h3 class="text-lg font-semibold">DocuMind</h3>
-          <p class="mt-1 text-sm text-white/55">Django · Celery · Llama‑3</p>
-          <p class="mt-3 text-sm text-white/70 leading-relaxed">
-            SaaS document intelligence platform for summarization and entity extraction with concurrent file processing.
-          </p>
-          <ul class="mt-4 space-y-2 text-sm text-white/70 list-disc pl-5">
-            <li>Multi-tenant SaaS backend handling 50+ concurrent file processing.</li>
-            <li>Llama‑3 contract summarization + entity extraction.</li>
-            <li>Reduced manual review time by 90% (8 hours → 30 minutes).</li>
-          </ul>
-        </article>
+        <a class="card-link group" href="https://github.com/Muazzam741" target="_blank" rel="noopener"
+           aria-label="DocuMind project (opens GitHub)">
+          <article class="glass soft-shadow rounded-3xl p-6 border border-white/10 proj-card transition-transform duration-200 group-hover:-translate-y-1 group-hover:border-white/20">
+            <h3 class="text-lg font-semibold group-hover:text-white">DocuMind</h3>
+            <p class="mt-1 text-sm text-white/55">Django · Celery · Llama‑3</p>
+            <p class="mt-3 text-sm text-white/70 leading-relaxed">
+              SaaS document intelligence platform for summarization and entity extraction with concurrent file processing.
+            </p>
+            <ul class="mt-4 space-y-2 text-sm text-white/70 list-disc pl-5">
+              <li>Multi-tenant SaaS backend handling 50+ concurrent file processing.</li>
+              <li>Llama‑3 contract summarization + entity extraction.</li>
+              <li>Reduced manual review time by 90% (8 hours → 30 minutes).</li>
+            </ul>
+            <p class="mt-5 text-xs text-white/55">Click to view on GitHub →</p>
+          </article>
+        </a>
 
-        <article class="glass soft-shadow rounded-3xl p-6 border border-white/10 proj-card">
-          <h3 class="text-lg font-semibold">Agentic Workflow Automation</h3>
-          <p class="mt-1 text-sm text-white/55">Python · LangGraph · OpenAI</p>
-          <p class="mt-3 text-sm text-white/70 leading-relaxed">
-            Autonomous agent to execute multi-step workflows with a quality loop to reduce errors.
-          </p>
-          <ul class="mt-4 space-y-2 text-sm text-white/70 list-disc pl-5">
-            <li>Runs Search → Analyze → Report without human intervention.</li>
-            <li>Reduced hallucinations by 60% using a self-reflection loop.</li>
-            <li>Structured final output for downstream consumption.</li>
-          </ul>
-        </article>
+        <a class="card-link group" href="https://github.com/Muazzam741" target="_blank" rel="noopener"
+           aria-label="Agentic Workflow Automation project (opens GitHub)">
+          <article class="glass soft-shadow rounded-3xl p-6 border border-white/10 proj-card transition-transform duration-200 group-hover:-translate-y-1 group-hover:border-white/20">
+            <h3 class="text-lg font-semibold group-hover:text-white">Agentic Workflow Automation</h3>
+            <p class="mt-1 text-sm text-white/55">Python · LangGraph · OpenAI</p>
+            <p class="mt-3 text-sm text-white/70 leading-relaxed">
+              Autonomous agent to execute multi-step workflows with a quality loop to reduce errors.
+            </p>
+            <ul class="mt-4 space-y-2 text-sm text-white/70 list-disc pl-5">
+              <li>Runs Search → Analyze → Report without human intervention.</li>
+              <li>Reduced hallucinations by 60% using a self-reflection loop.</li>
+              <li>Structured final output for downstream consumption.</li>
+            </ul>
+            <p class="mt-5 text-xs text-white/55">Click to view on GitHub →</p>
+          </article>
+        </a>
 
-        <article class="glass soft-shadow rounded-3xl p-6 border border-white/10 proj-card">
-          <h3 class="text-lg font-semibold">Distributed Inventory API</h3>
-          <p class="mt-1 text-sm text-white/55">DRF · Redis · Docker · PostgreSQL</p>
-          <p class="mt-3 text-sm text-white/70 leading-relaxed">
-            High-concurrency REST API designed for low-latency performance and secure access control.
-          </p>
-          <ul class="mt-4 space-y-2 text-sm text-white/70 list-disc pl-5">
-            <li>Sub-100ms latency under high load using Redis caching.</li>
-            <li>JWT-based RBAC for sensitive endpoints.</li>
-            <li>100% test coverage for critical workflows using PyTest.</li>
-          </ul>
-        </article>
+        <a class="card-link group" href="https://github.com/Muazzam741" target="_blank" rel="noopener"
+           aria-label="Distributed Inventory API project (opens GitHub)">
+          <article class="glass soft-shadow rounded-3xl p-6 border border-white/10 proj-card transition-transform duration-200 group-hover:-translate-y-1 group-hover:border-white/20">
+            <h3 class="text-lg font-semibold group-hover:text-white">Distributed Inventory API</h3>
+            <p class="mt-1 text-sm text-white/55">DRF · Redis · Docker · PostgreSQL</p>
+            <p class="mt-3 text-sm text-white/70 leading-relaxed">
+              High-concurrency REST API designed for low-latency performance and secure access control.
+            </p>
+            <ul class="mt-4 space-y-2 text-sm text-white/70 list-disc pl-5">
+              <li>Sub-100ms latency under high load using Redis caching.</li>
+              <li>JWT-based RBAC for sensitive endpoints.</li>
+              <li>100% test coverage for critical workflows using PyTest.</li>
+            </ul>
+            <p class="mt-5 text-xs text-white/55">Click to view on GitHub →</p>
+          </article>
+        </a>
       </div>
     </div>
   </section>
@@ -410,7 +428,10 @@
 
       <div class="mt-6 grid md:grid-cols-3 gap-4">
         <div class="glass soft-shadow rounded-3xl p-6 border border-white/10 md:col-span-2 edu-card">
-          <h3 class="text-lg font-semibold">Maulana Azad National Urdu University, Hyderabad</h3>
+          <h3 class="text-lg font-semibold">
+            Maulana Azad National Urdu University, Hyderabad
+            <span class="text-white/60 font-medium text-sm"> (A Central Government University)</span>
+          </h3>
           <p class="mt-1 text-sm text-white/55">B.Tech in Computer Science · Jul 2021 – Apr 2025</p>
           <p class="mt-4 text-sm text-white/70">CGPA: 8.54 / 10.0</p>
         </div>
@@ -474,7 +495,7 @@
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
 
-    // Dark, subtle particles
+    // Slightly brighter particles to match the lighter dark theme
     tsParticles.load("tsparticles", {
       fullScreen: { enable: true, zIndex: -20 },
       background: { color: { value: "transparent" } },
@@ -484,8 +505,8 @@
         modes: { repulse: { distance: 90, duration: 0.25 } }
       },
       particles: {
-        color: { value: ["#818cf8", "#a78bfa", "#2dd4bf"] }, /* indigo/violet/teal */
-        links: { enable: true, color: "#818cf8", opacity: 0.14, distance: 150 },
+        color: { value: ["#93c5fd", "#a78bfa", "#2dd4bf"] }, /* blue/violet/teal */
+        links: { enable: true, color: "#93c5fd", opacity: 0.14, distance: 150 },
         move: { enable: true, speed: 0.65, outModes: { default: "out" } },
         number: { value: 52, density: { enable: true, area: 950 } },
         opacity: { value: 0.30 },
