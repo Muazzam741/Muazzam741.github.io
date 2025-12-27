@@ -12,35 +12,44 @@
 
   <style>
     :root { color-scheme: light; }
-    body { background: #f8fafc; }
-
+    body { background: #fafafa; } /* zinc-50-ish */
+  
+    /* Premium "paper" card */
     .glass {
-      background: rgba(255,255,255,0.72);
-      border: 1px solid rgba(2,6,23,0.08);
-      backdrop-filter: blur(10px);
+      background: rgba(255,255,255,0.85);
+      border: 1px solid rgba(24,24,27,0.10); /* zinc-900 @ low opacity */
+      backdrop-filter: blur(12px);
     }
+  
+    /* Softer, more professional shadow */
     .soft-shadow {
       box-shadow:
-        0 0 0 1px rgba(2,6,23,0.05),
-        0 18px 60px rgba(2,6,23,0.10);
+        0 0 0 1px rgba(24,24,27,0.05),
+        0 18px 50px rgba(24,24,27,0.10);
     }
+  
+    /* More professional gradient: indigo -> violet */
     .grad-text {
-      background: linear-gradient(90deg, #7c3aed, #06b6d4, #22c55e);
+      background: linear-gradient(90deg, #4338ca, #6d28d9); /* indigo-700 -> violet-700 */
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
     }
+  
+    /* Make grid lines very subtle */
     .grid-lines {
       background-image:
-        linear-gradient(to right, rgba(2,6,23,0.06) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(2,6,23,0.06) 1px, transparent 1px);
-      background-size: 56px 56px;
-      mask-image: radial-gradient(ellipse at top, rgba(0,0,0,0.95), transparent 70%);
-      opacity: .35;
+        linear-gradient(to right, rgba(24,24,27,0.045) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(24,24,27,0.045) 1px, transparent 1px);
+      background-size: 64px 64px;
+      mask-image: radial-gradient(ellipse at top, rgba(0,0,0,0.85), transparent 70%);
+      opacity: .22;
     }
-    .ring-soft { box-shadow: 0 0 0 1px rgba(2,6,23,0.08); }
-    ::selection { background: rgba(124,58,237,0.20); }
+  
+    .ring-soft { box-shadow: 0 0 0 1px rgba(24,24,27,0.08); }
+    ::selection { background: rgba(99,102,241,0.18); } /* indigo */
   </style>
+  
 </head>
 
 <body class="text-slate-900 overflow-x-hidden">
