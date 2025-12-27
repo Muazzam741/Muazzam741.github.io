@@ -4,270 +4,470 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Muazzam Ali | Backend Engineer — GenAI Specialist</title>
-  <meta name="description" content="Muazzam Ali — Backend Engineer & GenAI Specialist. High-concurrency Django APIs, PostgreSQL optimization, Redis caching/rate limiting, agentic workflows, and RAG systems." />
-  <meta name="theme-color" content="#0b1220" />
-  <link rel="stylesheet" href="style.css" />
+  <meta name="description" content="Muazzam Ali — Backend Engineer & GenAI Specialist. Django/DRF, PostgreSQL optimization, Redis caching/rate limiting, RAG + agentic workflows." />
+  <meta name="theme-color" content="#070A12" />
+
+  <!-- Tailwind via Play CDN (fastest for GitHub Pages single-file setup) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    /* Premium gradient + glow style (inspired by modern portfolio trends) */
+    :root { color-scheme: dark; }
+    body { background: #070A12; }
+    .glass {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.10);
+      backdrop-filter: blur(10px);
+    }
+    .grad-text {
+      background: linear-gradient(90deg, #a78bfa, #22c55e, #60a5fa);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .glow {
+      box-shadow:
+        0 0 0 1px rgba(255,255,255,0.08),
+        0 25px 80px rgba(124, 92, 255, 0.18),
+        0 25px 80px rgba(34, 197, 94, 0.10);
+    }
+    .grid-lines {
+      background-image:
+        linear-gradient(to right, rgba(255,255,255,0.05) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255,255,255,0.05) 1px, transparent 1px);
+      background-size: 48px 48px;
+      mask-image: radial-gradient(ellipse at top, rgba(0,0,0,0.9), transparent 70%);
+      opacity: .25;
+    }
+    /* Nice selection */
+    ::selection { background: rgba(167, 139, 250, 0.35); }
+  </style>
 </head>
 
-<body>
-  <header class="nav">
-    <div class="container nav-inner">
-      <a class="logo" href="#top">Muazzam</a>
-      <nav class="links">
-        <a href="#about">About</a>
-        <a href="#experience">Experience</a>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#achievements">Achievements</a>
-        <a href="#contact">Contact</a>
+<body class="text-zinc-100 overflow-x-hidden">
+  <!-- Animated particles background -->
+  <div id="tsparticles" class="fixed inset-0 -z-20"></div>
+  <div class="fixed inset-0 -z-10 grid-lines"></div>
+
+  <!-- NAV -->
+  <header class="sticky top-0 z-50 border-b border-white/10 bg-black/30 backdrop-blur-xl">
+    <div class="mx-auto max-w-6xl px-5 py-4 flex items-center justify-between">
+      <a href="#top" class="font-semibold tracking-tight text-white/90 hover:text-white">
+        Muazzam<span class="text-white/40">.dev</span>
+      </a>
+
+      <nav class="hidden md:flex gap-6 text-sm text-white/70">
+        <a class="hover:text-white" href="#about">About</a>
+        <a class="hover:text-white" href="#experience">Experience</a>
+        <a class="hover:text-white" href="#projects">Projects</a>
+        <a class="hover:text-white" href="#skills">Skills</a>
+        <a class="hover:text-white" href="#education">Education</a>
+        <a class="hover:text-white" href="#contact">Contact</a>
       </nav>
+
+      <div class="flex items-center gap-2">
+        <a href="Muazzam_Ali_Resume.pdf" target="_blank" rel="noopener"
+           class="hidden sm:inline-flex items-center gap-2 rounded-xl px-4 py-2 text-sm font-medium bg-white/10 hover:bg-white/15 border border-white/10">
+          Resume
+        </a>
+        <a href="#contact"
+           class="inline-flex items-center gap-2 rounded-xl px-4 py-2 text-sm font-semibold bg-violet-500/90 hover:bg-violet-500 text-white">
+          Contact
+        </a>
+      </div>
     </div>
   </header>
 
-  <main id="top">
-    <!-- HERO -->
-    <section class="hero">
-      <div class="container hero-grid">
-        <div>
-          <p class="kicker">Backend Engineer — GenAI Specialist</p>
-          <h1>Muazzam Ali</h1>
-          <p class="subtitle">
-            Backend engineer focused on high‑concurrency systems and GenAI workflows—production APIs, resilient caching,
-            and agentic automation that measurably improves latency, cost, and developer velocity.
+  <!-- HERO -->
+  <section id="top" class="relative">
+    <div class="mx-auto max-w-6xl px-5 pt-16 pb-10">
+      <div class="glass glow rounded-3xl p-7 md:p-10">
+        <div class="grid md:grid-cols-[1.4fr_0.8fr] gap-10 items-start">
+          <div>
+            <p class="text-emerald-300/90 font-medium tracking-wide">
+              Backend Engineer — GenAI Specialist
+            </p>
+
+            <h1 class="mt-4 text-4xl md:text-6xl font-semibold leading-[1.02]">
+              Building <span class="grad-text">high‑performance</span> backend systems<br class="hidden md:block" />
+              and practical GenAI products.
+            </h1>
+
+            <p class="mt-5 text-white/70 text-base md:text-lg leading-relaxed">
+              Backend Engineer with experience in high‑concurrency systems (handling 5x traffic spikes) and autonomous AI agents
+              reducing manual work by 90%. Proven impact: 25% latency reduction, 30% cost optimization, production-grade REST APIs,
+              and resilient caching strategies.
+            </p>
+
+            <div class="mt-7 flex flex-wrap gap-3">
+              <a href="Muazzam_Ali_Resume.pdf" target="_blank" rel="noopener"
+                 class="inline-flex items-center justify-center rounded-2xl px-5 py-3 text-sm font-semibold bg-white text-black hover:bg-white/90">
+                View Resume
+              </a>
+              <a href="https://github.com/Muazzam741" target="_blank" rel="noopener"
+                 class="inline-flex items-center justify-center rounded-2xl px-5 py-3 text-sm font-semibold bg-white/10 hover:bg-white/15 border border-white/10">
+                GitHub
+              </a>
+              <a href="https://linkedin.com/in/muazzamofficial" target="_blank" rel="noopener"
+                 class="inline-flex items-center justify-center rounded-2xl px-5 py-3 text-sm font-semibold bg-white/10 hover:bg-white/15 border border-white/10">
+                LinkedIn
+              </a>
+              <a href="mailto:muazzamali741@gmail.com"
+                 class="inline-flex items-center justify-center rounded-2xl px-5 py-3 text-sm font-semibold bg-white/10 hover:bg-white/15 border border-white/10">
+                Email
+              </a>
+            </div>
+
+            <div class="mt-8 flex flex-wrap gap-2">
+              <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/70">25% latency reduction</span>
+              <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/70">10,000+ daily users</span>
+              <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/70">5x traffic spikes</span>
+              <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/70">30% DB load reduction</span>
+              <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/70">90% manual work reduced</span>
+              <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/70">60% fewer hallucinations</span>
+            </div>
+          </div>
+
+          <aside class="glass rounded-3xl p-6 border border-white/10">
+            <h2 class="text-sm font-semibold text-white/80">Quick info</h2>
+            <div class="mt-4 space-y-3 text-sm text-white/70">
+              <div class="flex items-center justify-between gap-4">
+                <span class="text-white/50">Email</span>
+                <a class="hover:text-white" href="mailto:muazzamali741@gmail.com">muazzamali741@gmail.com</a>
+              </div>
+              <div class="flex items-center justify-between gap-4">
+                <span class="text-white/50">Phone</span>
+                <a class="hover:text-white" href="tel:+917668177718">+91 7668177718</a>
+              </div>
+              <div class="flex items-center justify-between gap-4">
+                <span class="text-white/50">GitHub</span>
+                <a class="hover:text-white" target="_blank" rel="noopener" href="https://github.com/Muazzam741">Muazzam741</a>
+              </div>
+              <div class="flex items-center justify-between gap-4">
+                <span class="text-white/50">LinkedIn</span>
+                <a class="hover:text-white" target="_blank" rel="noopener" href="https://linkedin.com/in/muazzamofficial">muazzamofficial</a>
+              </div>
+
+              <div class="pt-3 border-t border-white/10">
+                <p class="text-xs text-white/55 leading-relaxed">
+                  Focus: Django/DRF + PostgreSQL optimization, Redis caching/rate limiting, and GenAI workflows (agents + RAG).
+                </p>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="py-10">
+    <div class="mx-auto max-w-6xl px-5">
+      <div class="section-title mb-6">
+        <p class="text-xs uppercase tracking-[0.22em] text-white/50">Overview</p>
+        <h2 class="mt-2 text-2xl md:text-3xl font-semibold">About</h2>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-4">
+        <div class="glass rounded-3xl p-6 border border-white/10 md:col-span-2">
+          <p class="text-white/70 leading-relaxed">
+            Backend Engineer with strong experience building production APIs using Django/DRF and optimizing PostgreSQL performance.
+            Comfortable designing caching layers, rate limiting, and secure access control middleware for real-world workloads.
           </p>
-
-          <div class="cta">
-            <a class="btn primary" href="Muazzam_Ali_Resume.pdf" target="_blank" rel="noopener">Resume</a>
-            <a class="btn" href="https://github.com/Muazzam741" target="_blank" rel="noopener">GitHub</a>
-            <a class="btn" href="https://linkedin.com/in/muazzamofficial" target="_blank" rel="noopener">LinkedIn</a>
-            <a class="btn" href="mailto:muazzamali741@gmail.com">Email</a>
-          </div>
-
-          <div class="chips">
-            <span class="chip">25% API latency reduction</span>
-            <span class="chip">10,000+ daily users impacted</span>
-            <span class="chip">5x traffic spikes handled</span>
-            <span class="chip">30% DB load reduced</span>
-            <span class="chip">90% manual work eliminated</span>
-            <span class="chip">60% fewer hallucinations (self-reflection)</span>
-          </div>
+          <p class="mt-4 text-white/70 leading-relaxed">
+            In GenAI, builds agentic systems (LangGraph) and document intelligence pipelines that reduce manual effort and improve reliability.
+            Also experienced in reducing query execution via ORM-level optimizations and working cross-functionally to deliver features as required.
+          </p>
         </div>
 
-        <aside class="card">
-          <h3>Quick info</h3>
-          <ul class="info">
-            <li><span>Email</span><a href="mailto:muazzamali741@gmail.com">muazzamali741@gmail.com</a></li>
-            <li><span>Phone</span><a href="tel:+917668177718">+91 7668177718</a></li>
-            <li><span>GitHub</span><a href="https://github.com/Muazzam741" target="_blank" rel="noopener">Muazzam741</a></li>
-            <li><span>LinkedIn</span><a href="https://linkedin.com/in/muazzamofficial" target="_blank" rel="noopener">muazzamofficial</a></li>
+        <div class="glass rounded-3xl p-6 border border-white/10">
+          <h3 class="text-sm font-semibold text-white/80">What matters</h3>
+          <ul class="mt-3 space-y-2 text-sm text-white/70 list-disc pl-5">
+            <li>Measurable performance wins (latency, cost, throughput).</li>
+            <li>Clean APIs and stable contracts across teams.</li>
+            <li>Practical GenAI: structured outputs, evaluation, guardrails.</li>
           </ul>
-        </aside>
-      </div>
-    </section>
-
-    <!-- ABOUT -->
-    <section id="about" class="section">
-      <div class="container">
-        <h2>About</h2>
-        <p>
-          Backend Engineer with experience building high‑concurrency systems (handling 5x traffic spikes) and GenAI
-          solutions like autonomous agents and document intelligence pipelines.
-          Proven impact: 25% latency reduction, 30% cost optimization, and production-ready REST APIs with resilient
-          caching strategies.
-        </p>
-        <p>
-          Work centers around Django/DRF + PostgreSQL performance, Redis patterns (caching + rate limiting), and
-          secure API design (domain whitelisting, IP-based access control). In GenAI projects, builds structured
-          agentic flows and RAG-style pipelines to reduce manual effort and improve output quality.
-        </p>
-        <p>
-          Strong collaboration style: works closely with cross-functional teams (product, QA, and dependent engineering teams)
-          to align requirements, validate edge cases, and deliver the intended functionality with stable releases.
-        </p>
-      </div>
-    </section>
-
-    <!-- EXPERIENCE -->
-    <section id="experience" class="section">
-      <div class="container">
-        <h2>Experience</h2>
-
-        <div class="timeline">
-          <article class="item">
-            <div class="item-head">
-              <h3>Loyalty Juggernaut Inc. — Product Engineer</h3>
-              <p class="muted">Apr 2025 – Present</p>
-            </div>
-            <ul>
-              <li>Reduced API latency by 25% for 10,000+ daily users by engineering 15+ endpoints with Django REST Framework and optimizing complex PostgreSQL queries.</li>
-              <li>Optimized Django ORM access patterns to reduce query count and improve response times on performance-critical endpoints (e.g., minimizing redundant database hits and improving query planning with indexing).</li>
-              <li>Enabled the system to handle 5x traffic spikes during peak loads by architecting a Redis-based sliding-window rate limiter and caching strategy, improving response times by 40%.</li>
-              <li>Hardened API security by implementing strict domain whitelisting and IP-based access control middleware to reduce unauthorized access vectors.</li>
-              <li>Worked closely with other teams to align requirements, validate functional behavior, and ship end-to-end features that match business expectations.</li>
-            </ul>
-          </article>
-
-          <article class="item">
-            <div class="item-head">
-              <h3>Loyalty Juggernaut Inc. — Product Engineer Intern</h3>
-              <p class="muted">Jan 2025 – Apr 2025</p>
-            </div>
-            <ul>
-              <li>Increased sprint velocity by 15% by delivering 12 production-ready features within 3 months via efficient Agile/Scrum execution.</li>
-              <li>Reduced direct database query load by 30% by implementing a multi-layer Redis caching mechanism, improving cloud cost efficiency.</li>
-              <li>Improved maintainability by implementing consistent request validation, reusable service-layer patterns, and safer failure handling for common API flows.</li>
-              <li>Collaborated with senior engineers in PR reviews and rollout planning to safely ship changes to production systems.</li>
-            </ul>
-          </article>
-
-          <article class="item">
-            <div class="item-head">
-              <h3>Queuify — Machine Learning Engineer Intern</h3>
-              <p class="muted">Feb 2024 – Jul 2024</p>
-            </div>
-            <ul>
-              <li>Built end-to-end ML pipelines using TensorFlow and scikit-learn and achieved 85% validation accuracy on predictive models.</li>
-              <li>Improved model performance by 20% for core business cases by fine-tuning deep learning architectures using transfer learning.</li>
-              <li>Worked with stakeholders to translate business needs into datasets, metrics, and iterative experiments that improved usability.</li>
-            </ul>
-          </article>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- PROJECTS -->
-    <section id="projects" class="section">
-      <div class="container">
-        <h2>Projects</h2>
+  <!-- EXPERIENCE -->
+  <section id="experience" class="py-10">
+    <div class="mx-auto max-w-6xl px-5">
+      <p class="text-xs uppercase tracking-[0.22em] text-white/50">Work</p>
+      <h2 class="mt-2 text-2xl md:text-3xl font-semibold">Experience</h2>
 
-        <div class="grid">
-          <article class="card">
-            <h3>DocuMind — SaaS Document Intelligence Platform</h3>
-            <p class="muted">Django · Celery · Llama‑3</p>
-            <p class="muted">
-              Multi-tenant SaaS backend for document processing, summarization, and extraction workflows.
-            </p>
-            <ul>
-              <li>Built a multi-tenant backend handling 50+ concurrent file-processing jobs.</li>
-              <li>Implemented Llama‑3 powered contract summarization and entity extraction.</li>
-              <li>Reduced manual review effort by 90% (8-hour process → 30-minute workflow) by automating the review pipeline.</li>
-            </ul>
-          </article>
-
-          <article class="card">
-            <h3>Agentic Workflow Automation System</h3>
-            <p class="muted">Python · LangGraph · OpenAI</p>
-            <p class="muted">
-              Autonomous agent that executes multi-step workflows with built-in quality control.
-            </p>
-            <ul>
-              <li>Developed an autonomous AI agent capable of executing multi-step workflows (Search → Analyze → Report) without human intervention.</li>
-              <li>Reduced hallucination rates by 60% by adding a self-reflection loop where the model critiques and refines output before final delivery.</li>
-              <li>Designed the workflow to produce structured outputs suitable for downstream use (reports, summaries, follow-ups).</li>
-            </ul>
-          </article>
-
-          <article class="card">
-            <h3>Distributed Inventory Management API</h3>
-            <p class="muted">Django REST Framework · Redis · Docker · PostgreSQL</p>
-            <p class="muted">
-              High-concurrency REST API designed for low latency and secure access.
-            </p>
-            <ul>
-              <li>Engineered a high-concurrency REST API with Django and PostgreSQL, using Redis caching to maintain sub-100ms latency under high load.</li>
-              <li>Secured sensitive endpoints with JWT-based RBAC and implemented strong access controls for critical actions.</li>
-              <li>Achieved 100% test coverage for critical transaction workflows using PyTest.</li>
-            </ul>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- SKILLS -->
-    <section id="skills" class="section">
-      <div class="container">
-        <h2>Skills</h2>
-
-        <div class="skill-grid">
-          <div class="card">
-            <h3>Backend engineering</h3>
-            <p>Python · Django/DRF · FastAPI · Celery · Flask · JWT · RBAC</p>
+      <div class="mt-6 space-y-4">
+        <!-- LJI - PE -->
+        <article class="glass rounded-3xl p-6 border border-white/10 exp-card">
+          <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2">
+            <h3 class="text-lg font-semibold">Loyalty Juggernaut Inc. — Product Engineer</h3>
+            <p class="text-sm text-white/55">Apr 2025 – Present</p>
           </div>
-
-          <div class="card">
-            <h3>Database & caching</h3>
-            <p>PostgreSQL (indexing, optimization) · Redis (caching patterns, rate limiting)</p>
+          <p class="mt-3 text-sm text-white/65">
+            Backend ownership across APIs, performance, caching, and security in a production Django ecosystem.
+          </p>
+          <ul class="mt-4 space-y-2 text-sm text-white/70 list-disc pl-5">
+            <li>Reduced API latency by 25% for 10,000+ daily users by engineering 15+ endpoints in Django REST Framework and optimizing complex PostgreSQL queries.</li>
+            <li>Optimized Django ORM query patterns to reduce database hits and improve response time (e.g., reducing redundant queries and improving query execution with indexing and better access patterns).</li>
+            <li>Designed a Redis-based sliding-window rate limiter + caching strategy to handle 5x peak traffic, improving response times by 40%.</li>
+            <li>Hardened security posture by implementing domain whitelisting and IP-based access control middleware for sensitive APIs.</li>
+            <li>Worked closely with product, QA, and dependent engineering teams to finalize requirements, manage edge cases, and deliver features end-to-end.</li>
+          </ul>
+          <div class="mt-5 flex flex-wrap gap-2">
+            <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/70">Django REST Framework</span>
+            <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/70">PostgreSQL</span>
+            <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/70">Redis</span>
+            <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/70">API Security</span>
           </div>
+        </article>
 
-          <div class="card">
-            <h3>GenAI / ML</h3>
-            <p>LangChain · LangGraph · OpenAI API · HuggingFace · RAG pipelines · Ollama · TensorFlow</p>
+        <!-- LJI - Intern -->
+        <article class="glass rounded-3xl p-6 border border-white/10 exp-card">
+          <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2">
+            <h3 class="text-lg font-semibold">Loyalty Juggernaut Inc. — Product Engineer Intern</h3>
+            <p class="text-sm text-white/55">Jan 2025 – Apr 2025</p>
           </div>
+          <p class="mt-3 text-sm text-white/65">
+            Shipped production features quickly while improving caching and DB efficiency.
+          </p>
+          <ul class="mt-4 space-y-2 text-sm text-white/70 list-disc pl-5">
+            <li>Increased team sprint velocity by 15% by delivering 12 production-ready features within 3 months through Agile/Scrum development.</li>
+            <li>Reduced direct database query load by 30% by implementing multi-layer Redis caching, improving cloud infrastructure cost efficiency.</li>
+            <li>Improved reliability and maintainability by standardizing validations, error handling, and service-layer abstractions for APIs.</li>
+            <li>Collaborated in reviews and debugging sessions to ship changes safely and reduce regressions.</li>
+          </ul>
+          <div class="mt-5 flex flex-wrap gap-2">
+            <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/70">Redis caching</span>
+            <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/70">Agile</span>
+            <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/70">Backend APIs</span>
+          </div>
+        </article>
 
-          <div class="card">
-            <h3>Tools & platforms</h3>
-            <p>AWS · Docker · Git · GitHub · Postman</p>
+        <!-- Queuify -->
+        <article class="glass rounded-3xl p-6 border border-white/10 exp-card">
+          <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2">
+            <h3 class="text-lg font-semibold">Queuify — Machine Learning Engineer Intern</h3>
+            <p class="text-sm text-white/55">Feb 2024 – Jul 2024</p>
           </div>
+          <p class="mt-3 text-sm text-white/65">
+            Built ML pipelines and improved model quality using practical experimentation and fine-tuning.
+          </p>
+          <ul class="mt-4 space-y-2 text-sm text-white/70 list-disc pl-5">
+            <li>Achieved 85% validation accuracy by building end-to-end ML pipelines using TensorFlow and scikit-learn.</li>
+            <li>Improved model performance by 20% for core business cases via transfer learning and iterative tuning.</li>
+            <li>Aligned model evaluation with stakeholder goals by defining measurable metrics and validating improvements on real use cases.</li>
+          </ul>
+          <div class="mt-5 flex flex-wrap gap-2">
+            <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/70">TensorFlow</span>
+            <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/70">scikit-learn</span>
+            <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/70">Transfer Learning</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="py-10">
+    <div class="mx-auto max-w-6xl px-5">
+      <p class="text-xs uppercase tracking-[0.22em] text-white/50">Build</p>
+      <h2 class="mt-2 text-2xl md:text-3xl font-semibold">Projects</h2>
+
+      <div class="mt-6 grid md:grid-cols-3 gap-4">
+        <article class="glass rounded-3xl p-6 border border-white/10 proj-card">
+          <h3 class="text-lg font-semibold">DocuMind</h3>
+          <p class="mt-1 text-sm text-white/55">Django · Celery · Llama‑3</p>
+          <p class="mt-3 text-sm text-white/70 leading-relaxed">
+            SaaS document intelligence platform for summarization and entity extraction with concurrent file processing.
+          </p>
+          <ul class="mt-4 space-y-2 text-sm text-white/70 list-disc pl-5">
+            <li>Multi-tenant backend handling 50+ concurrent file-processing jobs.</li>
+            <li>Contract summarization + entity extraction using Llama‑3.</li>
+            <li>Reduced manual review by 90% (8 hours → 30 minutes) by automating the workflow.</li>
+          </ul>
+        </article>
+
+        <article class="glass rounded-3xl p-6 border border-white/10 proj-card">
+          <h3 class="text-lg font-semibold">Agentic Workflow Automation</h3>
+          <p class="mt-1 text-sm text-white/55">Python · LangGraph · OpenAI</p>
+          <p class="mt-3 text-sm text-white/70 leading-relaxed">
+            Autonomous agent to execute multi-step workflows with a quality loop to reduce errors.
+          </p>
+          <ul class="mt-4 space-y-2 text-sm text-white/70 list-disc pl-5">
+            <li>Agent runs Search → Analyze → Report without human intervention.</li>
+            <li>Reduced hallucinations by 60% with a self-reflection loop that critiques and refines outputs.</li>
+            <li>Produces structured final outputs suitable for downstream consumption.</li>
+          </ul>
+        </article>
+
+        <article class="glass rounded-3xl p-6 border border-white/10 proj-card">
+          <h3 class="text-lg font-semibold">Distributed Inventory API</h3>
+          <p class="mt-1 text-sm text-white/55">DRF · Redis · Docker · PostgreSQL</p>
+          <p class="mt-3 text-sm text-white/70 leading-relaxed">
+            High-concurrency REST API designed for low-latency performance and secure access control.
+          </p>
+          <ul class="mt-4 space-y-2 text-sm text-white/70 list-disc pl-5">
+            <li>Maintained sub-100ms latency under load using Redis caching.</li>
+            <li>JWT-based RBAC for sensitive endpoints.</li>
+            <li>100% test coverage for critical transaction workflows using PyTest.</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="py-10">
+    <div class="mx-auto max-w-6xl px-5">
+      <p class="text-xs uppercase tracking-[0.22em] text-white/50">Toolkit</p>
+      <h2 class="mt-2 text-2xl md:text-3xl font-semibold">Skills</h2>
+
+      <div class="mt-6 grid md:grid-cols-2 gap-4">
+        <div class="glass rounded-3xl p-6 border border-white/10">
+          <h3 class="text-sm font-semibold text-white/80">Backend engineering</h3>
+          <p class="mt-3 text-sm text-white/70">Python · Django/DRF · FastAPI · Celery · Flask · JWT/RBAC</p>
+        </div>
+
+        <div class="glass rounded-3xl p-6 border border-white/10">
+          <h3 class="text-sm font-semibold text-white/80">Database & caching</h3>
+          <p class="mt-3 text-sm text-white/70">PostgreSQL (optimization, indexing) · Redis (patterns, caching, rate limiting)</p>
+        </div>
+
+        <div class="glass rounded-3xl p-6 border border-white/10">
+          <h3 class="text-sm font-semibold text-white/80">GenAI / ML</h3>
+          <p class="mt-3 text-sm text-white/70">LangChain · LangGraph · OpenAI API · HuggingFace · RAG Pipelines · Ollama · TensorFlow</p>
+        </div>
+
+        <div class="glass rounded-3xl p-6 border border-white/10">
+          <h3 class="text-sm font-semibold text-white/80">Tools & platforms</h3>
+          <p class="mt-3 text-sm text-white/70">AWS · Docker · Git/GitHub · Postman</p>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- ACHIEVEMENTS -->
-    <section id="achievements" class="section">
-      <div class="container">
-        <h2>Certifications & Achievements</h2>
-        <div class="timeline">
-          <article class="item">
-            <ul>
-              <li>Solved 230+ DSA problems on LeetCode with a 1,649 contest rating.</li>
-              <li>Machine Learning Specialization (Stanford).</li>
-              <li>MIT Computational Thinking.</li>
-            </ul>
-          </article>
+  <!-- EDUCATION + ACHIEVEMENTS -->
+  <section id="education" class="py-10">
+    <div class="mx-auto max-w-6xl px-5">
+      <p class="text-xs uppercase tracking-[0.22em] text-white/50">Background</p>
+      <h2 class="mt-2 text-2xl md:text-3xl font-semibold">Education & Achievements</h2>
+
+      <div class="mt-6 grid md:grid-cols-3 gap-4">
+        <div class="glass rounded-3xl p-6 border border-white/10 md:col-span-2">
+          <h3 class="text-lg font-semibold">Maulana Azad National Urdu University, Hyderabad</h3>
+          <p class="mt-1 text-sm text-white/55">B.Tech in Computer Science · Jul 2021 – Apr 2025</p>
+          <p class="mt-4 text-sm text-white/70">CGPA: 8.54 / 10.0</p>
+        </div>
+
+        <div class="glass rounded-3xl p-6 border border-white/10">
+          <h3 class="text-sm font-semibold text-white/80">Highlights</h3>
+          <ul class="mt-3 space-y-2 text-sm text-white/70 list-disc pl-5">
+            <li>230+ DSA problems solved (LeetCode).</li>
+            <li>LeetCode contest rating: 1,649.</li>
+            <li>Machine Learning Specialization (Stanford).</li>
+            <li>MIT Computational Thinking.</li>
+          </ul>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- EDUCATION -->
-    <section id="education" class="section">
-      <div class="container">
-        <h2>Education</h2>
-        <div class="timeline">
-          <article class="item">
-            <div class="item-head">
-              <h3>Maulana Azad National Urdu University, Hyderabad</h3>
-              <p class="muted">Jul 2021 – Apr 2025</p>
-            </div>
-            <ul>
-              <li>B.Tech in Computer Science — CGPA: 8.54/10.0</li>
-            </ul>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="section">
-      <div class="container">
-        <h2>Contact</h2>
-        <p class="muted">For opportunities, collaborations, or backend/GenAI consulting:</p>
-        <p>
-          Email: <a href="mailto:muazzamali741@gmail.com">muazzamali741@gmail.com</a> ·
-          LinkedIn: <a href="https://linkedin.com/in/muazzamofficial" target="_blank" rel="noopener">muazzamofficial</a> ·
-          GitHub: <a href="https://github.com/Muazzam741" target="_blank" rel="noopener">Muazzam741</a>
+  <!-- CONTACT -->
+  <section id="contact" class="py-14">
+    <div class="mx-auto max-w-6xl px-5">
+      <div class="glass rounded-3xl p-7 md:p-10 border border-white/10">
+        <p class="text-xs uppercase tracking-[0.22em] text-white/50">Reach out</p>
+        <h2 class="mt-2 text-2xl md:text-3xl font-semibold">Contact</h2>
+        <p class="mt-4 text-white/70 leading-relaxed">
+          Open to backend engineering roles and GenAI/backend product work. Best way to reach out is email or LinkedIn.
         </p>
-      </div>
-    </section>
 
-    <footer class="footer">
-      <div class="container">
-        <p class="muted">© <span id="year"></span> Muazzam Ali. Built with HTML/CSS and hosted on GitHub Pages.</p>
+        <div class="mt-6 flex flex-wrap gap-3">
+          <a class="rounded-2xl px-5 py-3 text-sm font-semibold bg-white text-black hover:bg-white/90"
+             href="mailto:muazzamali741@gmail.com">Email</a>
+          <a class="rounded-2xl px-5 py-3 text-sm font-semibold bg-white/10 hover:bg-white/15 border border-white/10"
+             target="_blank" rel="noopener" href="https://linkedin.com/in/muazzamofficial">LinkedIn</a>
+          <a class="rounded-2xl px-5 py-3 text-sm font-semibold bg-white/10 hover:bg-white/15 border border-white/10"
+             target="_blank" rel="noopener" href="https://github.com/Muazzam741">GitHub</a>
+          <a class="rounded-2xl px-5 py-3 text-sm font-semibold bg-violet-500/90 hover:bg-violet-500 text-white"
+             href="Muazzam_Ali_Resume.pdf" target="_blank" rel="noopener">Resume</a>
+        </div>
       </div>
-    </footer>
-  </main>
+
+      <footer class="py-10 text-center text-xs text-white/45">
+        © <span id="year"></span> Muazzam Ali · Built with Tailwind + GSAP + tsParticles · Hosted on GitHub Pages
+      </footer>
+    </div>
+  </section>
+
+  <!-- Libraries: GSAP + ScrollTrigger -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <!-- tsParticles (CDN bundle) -->
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@3/tsparticles.bundle.min.js"></script>
 
   <script>
+    // Year
     document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Particles background (tsParticles CDN bundle autoloads full preset per docs)
+    // Keep it subtle: low opacity, slow movement
+    tsParticles.load("tsparticles", {
+      fullScreen: { enable: true, zIndex: -20 },
+      background: { color: { value: "transparent" } },
+      fpsLimit: 60,
+      interactivity: {
+        events: {
+          onHover: { enable: true, mode: "repulse" },
+          resize: true
+        },
+        modes: { repulse: { distance: 90, duration: 0.3 } }
+      },
+      particles: {
+        color: { value: ["#a78bfa", "#22c55e", "#60a5fa"] },
+        links: {
+          enable: true,
+          color: "#a78bfa",
+          opacity: 0.15,
+          distance: 140
+        },
+        move: { enable: true, speed: 0.7, outModes: { default: "out" } },
+        number: { value: 55, density: { enable: true, area: 900 } },
+        opacity: { value: 0.35 },
+        shape: { type: "circle" },
+        size: { value: { min: 1, max: 3 } }
+      },
+      detectRetina: true
+    });
+
+    // GSAP animations
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Hero entrance
+    gsap.from("header", { y: -20, opacity: 0, duration: 0.6, ease: "power2.out" });
+    gsap.from(".glow", { y: 18, opacity: 0, duration: 0.9, ease: "power3.out", delay: 0.15 });
+
+    // Section reveal (cards)
+    const reveal = (selector) => {
+      gsap.utils.toArray(selector).forEach((el) => {
+        gsap.fromTo(el,
+          { y: 22, opacity: 0 },
+          {
+            y: 0,
+            opacity: 1,
+            duration: 0.7,
+            ease: "power2.out",
+            scrollTrigger: { trigger: el, start: "top 85%" }
+          }
+        );
+      });
+    };
+
+    reveal(".exp-card");
+    reveal(".proj-card");
   </script>
 </body>
 </html>
