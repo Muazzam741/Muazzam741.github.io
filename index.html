@@ -5,73 +5,72 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Muazzam Ali | Backend Engineer — GenAI Specialist</title>
   <meta name="description" content="Muazzam Ali — Backend Engineer & GenAI Specialist. Django/DRF, PostgreSQL optimization, Redis caching/rate limiting, RAG + agentic workflows." />
-  <meta name="theme-color" content="#070A12" />
+  <meta name="theme-color" content="#f8fafc" />
 
-  <!-- Tailwind via Play CDN (fastest for GitHub Pages single-file setup) -->
+  <!-- Tailwind via Play CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
 
   <style>
-    /* Premium gradient + glow style (inspired by modern portfolio trends) */
-    :root { color-scheme: dark; }
-    body { background: #070A12; }
+    :root { color-scheme: light; }
+    body { background: #f8fafc; }
+
     .glass {
-      background: rgba(255,255,255,0.06);
-      border: 1px solid rgba(255,255,255,0.10);
+      background: rgba(255,255,255,0.72);
+      border: 1px solid rgba(2,6,23,0.08);
       backdrop-filter: blur(10px);
     }
+    .soft-shadow {
+      box-shadow:
+        0 0 0 1px rgba(2,6,23,0.05),
+        0 18px 60px rgba(2,6,23,0.10);
+    }
     .grad-text {
-      background: linear-gradient(90deg, #a78bfa, #22c55e, #60a5fa);
+      background: linear-gradient(90deg, #7c3aed, #06b6d4, #22c55e);
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
     }
-    .glow {
-      box-shadow:
-        0 0 0 1px rgba(255,255,255,0.08),
-        0 25px 80px rgba(124, 92, 255, 0.18),
-        0 25px 80px rgba(34, 197, 94, 0.10);
-    }
     .grid-lines {
       background-image:
-        linear-gradient(to right, rgba(255,255,255,0.05) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(255,255,255,0.05) 1px, transparent 1px);
-      background-size: 48px 48px;
-      mask-image: radial-gradient(ellipse at top, rgba(0,0,0,0.9), transparent 70%);
-      opacity: .25;
+        linear-gradient(to right, rgba(2,6,23,0.06) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(2,6,23,0.06) 1px, transparent 1px);
+      background-size: 56px 56px;
+      mask-image: radial-gradient(ellipse at top, rgba(0,0,0,0.95), transparent 70%);
+      opacity: .35;
     }
-    /* Nice selection */
-    ::selection { background: rgba(167, 139, 250, 0.35); }
+    .ring-soft { box-shadow: 0 0 0 1px rgba(2,6,23,0.08); }
+    ::selection { background: rgba(124,58,237,0.20); }
   </style>
 </head>
 
-<body class="text-zinc-100 overflow-x-hidden">
-  <!-- Animated particles background -->
+<body class="text-slate-900 overflow-x-hidden">
+  <!-- Background -->
   <div id="tsparticles" class="fixed inset-0 -z-20"></div>
   <div class="fixed inset-0 -z-10 grid-lines"></div>
 
   <!-- NAV -->
-  <header class="sticky top-0 z-50 border-b border-white/10 bg-black/30 backdrop-blur-xl">
+  <header class="sticky top-0 z-50 border-b border-slate-900/10 bg-white/70 backdrop-blur-xl">
     <div class="mx-auto max-w-6xl px-5 py-4 flex items-center justify-between">
-      <a href="#top" class="font-semibold tracking-tight text-white/90 hover:text-white">
-        Muazzam<span class="text-white/40">.dev</span>
+      <a href="#top" class="font-semibold tracking-tight text-slate-900 hover:text-slate-950">
+        Muazzam<span class="text-slate-400">.dev</span>
       </a>
 
-      <nav class="hidden md:flex gap-6 text-sm text-white/70">
-        <a class="hover:text-white" href="#about">About</a>
-        <a class="hover:text-white" href="#experience">Experience</a>
-        <a class="hover:text-white" href="#projects">Projects</a>
-        <a class="hover:text-white" href="#skills">Skills</a>
-        <a class="hover:text-white" href="#education">Education</a>
-        <a class="hover:text-white" href="#contact">Contact</a>
+      <nav class="hidden md:flex gap-6 text-sm text-slate-600">
+        <a class="hover:text-slate-950" href="#about">About</a>
+        <a class="hover:text-slate-950" href="#experience">Experience</a>
+        <a class="hover:text-slate-950" href="#skills">Skills</a>
+        <a class="hover:text-slate-950" href="#projects">Projects</a>
+        <a class="hover:text-slate-950" href="#education">Education</a>
+        <a class="hover:text-slate-950" href="#contact">Contact</a>
       </nav>
 
       <div class="flex items-center gap-2">
         <a href="Muazzam_Ali_Resume.pdf" target="_blank" rel="noopener"
-           class="hidden sm:inline-flex items-center gap-2 rounded-xl px-4 py-2 text-sm font-medium bg-white/10 hover:bg-white/15 border border-white/10">
+           class="hidden sm:inline-flex items-center gap-2 rounded-xl px-4 py-2 text-sm font-medium bg-slate-900/5 hover:bg-slate-900/10 border border-slate-900/10">
           Resume
         </a>
         <a href="#contact"
-           class="inline-flex items-center gap-2 rounded-xl px-4 py-2 text-sm font-semibold bg-violet-500/90 hover:bg-violet-500 text-white">
+           class="inline-flex items-center gap-2 rounded-xl px-4 py-2 text-sm font-semibold bg-violet-600 hover:bg-violet-700 text-white">
           Contact
         </a>
       </div>
@@ -81,75 +80,75 @@
   <!-- HERO -->
   <section id="top" class="relative">
     <div class="mx-auto max-w-6xl px-5 pt-16 pb-10">
-      <div class="glass glow rounded-3xl p-7 md:p-10">
-        <div class="grid md:grid-cols-[1.4fr_0.8fr] gap-10 items-start">
+      <div class="glass soft-shadow rounded-3xl p-7 md:p-10">
+        <div class="grid md:grid-cols-[1.35fr_0.85fr] gap-10 items-start">
           <div>
-            <p class="text-emerald-300/90 font-medium tracking-wide">
+            <p class="text-emerald-700 font-medium tracking-wide">
               Backend Engineer — GenAI Specialist
             </p>
 
             <h1 class="mt-4 text-4xl md:text-6xl font-semibold leading-[1.02]">
-              Building <span class="grad-text">high‑performance</span> backend systems<br class="hidden md:block" />
-              and practical GenAI products.
+              Shipping <span class="grad-text">fast APIs</span> and<br class="hidden md:block" />
+              reliable GenAI workflows.
             </h1>
 
-            <p class="mt-5 text-white/70 text-base md:text-lg leading-relaxed">
-              Backend Engineer with experience in high‑concurrency systems (handling 5x traffic spikes) and autonomous AI agents
-              reducing manual work by 90%. Proven impact: 25% latency reduction, 30% cost optimization, production-grade REST APIs,
+            <p class="mt-5 text-slate-700 text-base md:text-lg leading-relaxed">
+              Backend Engineer with experience building high-concurrency systems handling 5x traffic spikes and autonomous AI agents
+              reducing manual work by 90%. Proven: 25% latency reduction, 30% cost optimization, production-grade REST APIs,
               and resilient caching strategies.
             </p>
 
             <div class="mt-7 flex flex-wrap gap-3">
               <a href="Muazzam_Ali_Resume.pdf" target="_blank" rel="noopener"
-                 class="inline-flex items-center justify-center rounded-2xl px-5 py-3 text-sm font-semibold bg-white text-black hover:bg-white/90">
+                 class="inline-flex items-center justify-center rounded-2xl px-5 py-3 text-sm font-semibold bg-slate-900 text-white hover:bg-slate-800">
                 View Resume
               </a>
               <a href="https://github.com/Muazzam741" target="_blank" rel="noopener"
-                 class="inline-flex items-center justify-center rounded-2xl px-5 py-3 text-sm font-semibold bg-white/10 hover:bg-white/15 border border-white/10">
+                 class="inline-flex items-center justify-center rounded-2xl px-5 py-3 text-sm font-semibold bg-white hover:bg-slate-50 border border-slate-900/10">
                 GitHub
               </a>
               <a href="https://linkedin.com/in/muazzamofficial" target="_blank" rel="noopener"
-                 class="inline-flex items-center justify-center rounded-2xl px-5 py-3 text-sm font-semibold bg-white/10 hover:bg-white/15 border border-white/10">
+                 class="inline-flex items-center justify-center rounded-2xl px-5 py-3 text-sm font-semibold bg-white hover:bg-slate-50 border border-slate-900/10">
                 LinkedIn
               </a>
               <a href="mailto:muazzamali741@gmail.com"
-                 class="inline-flex items-center justify-center rounded-2xl px-5 py-3 text-sm font-semibold bg-white/10 hover:bg-white/15 border border-white/10">
+                 class="inline-flex items-center justify-center rounded-2xl px-5 py-3 text-sm font-semibold bg-white hover:bg-slate-50 border border-slate-900/10">
                 Email
               </a>
             </div>
 
             <div class="mt-8 flex flex-wrap gap-2">
-              <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/70">25% latency reduction</span>
-              <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/70">10,000+ daily users</span>
-              <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/70">5x traffic spikes</span>
-              <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/70">30% DB load reduction</span>
-              <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/70">90% manual work reduced</span>
-              <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/70">60% fewer hallucinations</span>
+              <span class="rounded-full border border-slate-900/10 bg-white px-3 py-1 text-xs text-slate-700">25% latency reduction</span>
+              <span class="rounded-full border border-slate-900/10 bg-white px-3 py-1 text-xs text-slate-700">10,000+ daily users</span>
+              <span class="rounded-full border border-slate-900/10 bg-white px-3 py-1 text-xs text-slate-700">5x traffic spikes</span>
+              <span class="rounded-full border border-slate-900/10 bg-white px-3 py-1 text-xs text-slate-700">30% DB load reduction</span>
+              <span class="rounded-full border border-slate-900/10 bg-white px-3 py-1 text-xs text-slate-700">90% manual work reduced</span>
+              <span class="rounded-full border border-slate-900/10 bg-white px-3 py-1 text-xs text-slate-700">60% fewer hallucinations</span>
             </div>
           </div>
 
-          <aside class="glass rounded-3xl p-6 border border-white/10">
-            <h2 class="text-sm font-semibold text-white/80">Quick info</h2>
-            <div class="mt-4 space-y-3 text-sm text-white/70">
+          <aside class="glass rounded-3xl p-6 border border-slate-900/10 ring-soft">
+            <h2 class="text-sm font-semibold text-slate-800">Quick info</h2>
+            <div class="mt-4 space-y-3 text-sm text-slate-700">
               <div class="flex items-center justify-between gap-4">
-                <span class="text-white/50">Email</span>
-                <a class="hover:text-white" href="mailto:muazzamali741@gmail.com">muazzamali741@gmail.com</a>
+                <span class="text-slate-500">Email</span>
+                <a class="hover:text-slate-950" href="mailto:muazzamali741@gmail.com">muazzamali741@gmail.com</a>
               </div>
               <div class="flex items-center justify-between gap-4">
-                <span class="text-white/50">Phone</span>
-                <a class="hover:text-white" href="tel:+917668177718">+91 7668177718</a>
+                <span class="text-slate-500">Phone</span>
+                <a class="hover:text-slate-950" href="tel:+917668177718">+91 7668177718</a>
               </div>
               <div class="flex items-center justify-between gap-4">
-                <span class="text-white/50">GitHub</span>
-                <a class="hover:text-white" target="_blank" rel="noopener" href="https://github.com/Muazzam741">Muazzam741</a>
+                <span class="text-slate-500">GitHub</span>
+                <a class="hover:text-slate-950" target="_blank" rel="noopener" href="https://github.com/Muazzam741">Muazzam741</a>
               </div>
               <div class="flex items-center justify-between gap-4">
-                <span class="text-white/50">LinkedIn</span>
-                <a class="hover:text-white" target="_blank" rel="noopener" href="https://linkedin.com/in/muazzamofficial">muazzamofficial</a>
+                <span class="text-slate-500">LinkedIn</span>
+                <a class="hover:text-slate-950" target="_blank" rel="noopener" href="https://linkedin.com/in/muazzamofficial">muazzamofficial</a>
               </div>
 
-              <div class="pt-3 border-t border-white/10">
-                <p class="text-xs text-white/55 leading-relaxed">
+              <div class="pt-3 border-t border-slate-900/10">
+                <p class="text-xs text-slate-600 leading-relaxed">
                   Focus: Django/DRF + PostgreSQL optimization, Redis caching/rate limiting, and GenAI workflows (agents + RAG).
                 </p>
               </div>
@@ -163,29 +162,32 @@
   <!-- ABOUT -->
   <section id="about" class="py-10">
     <div class="mx-auto max-w-6xl px-5">
-      <div class="section-title mb-6">
-        <p class="text-xs uppercase tracking-[0.22em] text-white/50">Overview</p>
-        <h2 class="mt-2 text-2xl md:text-3xl font-semibold">About</h2>
-      </div>
+      <p class="text-xs uppercase tracking-[0.22em] text-slate-500">Overview</p>
+      <h2 class="mt-2 text-2xl md:text-3xl font-semibold">About</h2>
 
-      <div class="grid md:grid-cols-3 gap-4">
-        <div class="glass rounded-3xl p-6 border border-white/10 md:col-span-2">
-          <p class="text-white/70 leading-relaxed">
-            Backend Engineer with strong experience building production APIs using Django/DRF and optimizing PostgreSQL performance.
-            Comfortable designing caching layers, rate limiting, and secure access control middleware for real-world workloads.
+      <div class="mt-6 grid md:grid-cols-3 gap-4">
+        <div class="glass soft-shadow rounded-3xl p-6 border border-slate-900/10 md:col-span-2 about-card">
+          <p class="text-slate-700 leading-relaxed">
+            Backend Engineer focused on building production-grade APIs and performance-first systems using Django/DRF,
+            PostgreSQL optimization (query tuning + indexing), and Redis (caching + rate limiting).
           </p>
-          <p class="mt-4 text-white/70 leading-relaxed">
-            In GenAI, builds agentic systems (LangGraph) and document intelligence pipelines that reduce manual effort and improve reliability.
-            Also experienced in reducing query execution via ORM-level optimizations and working cross-functionally to deliver features as required.
+          <p class="mt-4 text-slate-700 leading-relaxed">
+            Also builds GenAI systems such as autonomous agents and document intelligence workflows using LangChain/LangGraph,
+            OpenAI APIs, HuggingFace, and RAG pipelines—aiming for structured outputs, reliability, and measurable business impact.
+          </p>
+          <p class="mt-4 text-slate-700 leading-relaxed">
+            Works closely with cross-functional teams to clarify requirements, validate edge cases, and deliver the functionality
+            as required with predictable releases.
           </p>
         </div>
 
-        <div class="glass rounded-3xl p-6 border border-white/10">
-          <h3 class="text-sm font-semibold text-white/80">What matters</h3>
-          <ul class="mt-3 space-y-2 text-sm text-white/70 list-disc pl-5">
-            <li>Measurable performance wins (latency, cost, throughput).</li>
-            <li>Clean APIs and stable contracts across teams.</li>
-            <li>Practical GenAI: structured outputs, evaluation, guardrails.</li>
+        <div class="glass soft-shadow rounded-3xl p-6 border border-slate-900/10 about-card">
+          <h3 class="text-sm font-semibold text-slate-800">Core strengths</h3>
+          <ul class="mt-3 space-y-2 text-sm text-slate-700 list-disc pl-5">
+            <li>Backend performance: ORM tuning, query optimization, caching strategies.</li>
+            <li>High-concurrency design: rate limiting, fault-tolerant patterns.</li>
+            <li>GenAI engineering: agents, RAG pipelines, evaluation/guardrails.</li>
+            <li>Shipping mindset: measurable metrics and production readiness.</li>
           </ul>
         </div>
       </div>
@@ -195,76 +197,130 @@
   <!-- EXPERIENCE -->
   <section id="experience" class="py-10">
     <div class="mx-auto max-w-6xl px-5">
-      <p class="text-xs uppercase tracking-[0.22em] text-white/50">Work</p>
+      <p class="text-xs uppercase tracking-[0.22em] text-slate-500">Work</p>
       <h2 class="mt-2 text-2xl md:text-3xl font-semibold">Experience</h2>
 
       <div class="mt-6 space-y-4">
         <!-- LJI - PE -->
-        <article class="glass rounded-3xl p-6 border border-white/10 exp-card">
+        <article class="glass soft-shadow rounded-3xl p-6 border border-slate-900/10 exp-card">
           <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2">
             <h3 class="text-lg font-semibold">Loyalty Juggernaut Inc. — Product Engineer</h3>
-            <p class="text-sm text-white/55">Apr 2025 – Present</p>
+            <p class="text-sm text-slate-500">Apr 2025 – Present</p>
           </div>
-          <p class="mt-3 text-sm text-white/65">
-            Backend ownership across APIs, performance, caching, and security in a production Django ecosystem.
+          <p class="mt-3 text-sm text-slate-600">
+            Backend ownership across APIs, performance optimization, caching/rate limiting, and security hardening.
           </p>
-          <ul class="mt-4 space-y-2 text-sm text-white/70 list-disc pl-5">
-            <li>Reduced API latency by 25% for 10,000+ daily users by engineering 15+ endpoints in Django REST Framework and optimizing complex PostgreSQL queries.</li>
-            <li>Optimized Django ORM query patterns to reduce database hits and improve response time (e.g., reducing redundant queries and improving query execution with indexing and better access patterns).</li>
-            <li>Designed a Redis-based sliding-window rate limiter + caching strategy to handle 5x peak traffic, improving response times by 40%.</li>
-            <li>Hardened security posture by implementing domain whitelisting and IP-based access control middleware for sensitive APIs.</li>
-            <li>Worked closely with product, QA, and dependent engineering teams to finalize requirements, manage edge cases, and deliver features end-to-end.</li>
+          <ul class="mt-4 space-y-2 text-sm text-slate-700 list-disc pl-5">
+            <li>Reduced API latency by 25% for 10,000+ daily users by building 15+ DRF endpoints and optimizing complex PostgreSQL queries.</li>
+            <li>Optimized Django ORM query execution to reduce unnecessary DB hits and improve response time on critical flows (query count reduction, better access patterns).</li>
+            <li>Enabled the system to handle 5x traffic spikes during peak loads with a Redis-based sliding-window rate limiter and caching strategy, improving response times by 40%.</li>
+            <li>Implemented strict domain whitelisting and IP-based access control middleware, significantly hardening the API security posture.</li>
+            <li>Worked closely with product/QA/dependent teams to align functionality, confirm edge cases, and deliver features end-to-end.</li>
           </ul>
           <div class="mt-5 flex flex-wrap gap-2">
-            <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/70">Django REST Framework</span>
-            <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/70">PostgreSQL</span>
-            <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/70">Redis</span>
-            <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/70">API Security</span>
+            <span class="rounded-full border border-slate-900/10 bg-white px-3 py-1 text-xs text-slate-700">Django REST Framework</span>
+            <span class="rounded-full border border-slate-900/10 bg-white px-3 py-1 text-xs text-slate-700">PostgreSQL</span>
+            <span class="rounded-full border border-slate-900/10 bg-white px-3 py-1 text-xs text-slate-700">Redis</span>
+            <span class="rounded-full border border-slate-900/10 bg-white px-3 py-1 text-xs text-slate-700">API Security</span>
           </div>
         </article>
 
         <!-- LJI - Intern -->
-        <article class="glass rounded-3xl p-6 border border-white/10 exp-card">
+        <article class="glass soft-shadow rounded-3xl p-6 border border-slate-900/10 exp-card">
           <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2">
             <h3 class="text-lg font-semibold">Loyalty Juggernaut Inc. — Product Engineer Intern</h3>
-            <p class="text-sm text-white/55">Jan 2025 – Apr 2025</p>
+            <p class="text-sm text-slate-500">Jan 2025 – Apr 2025</p>
           </div>
-          <p class="mt-3 text-sm text-white/65">
-            Shipped production features quickly while improving caching and DB efficiency.
+          <p class="mt-3 text-sm text-slate-600">
+            Shipped production features while improving caching efficiency and database performance.
           </p>
-          <ul class="mt-4 space-y-2 text-sm text-white/70 list-disc pl-5">
-            <li>Increased team sprint velocity by 15% by delivering 12 production-ready features within 3 months through Agile/Scrum development.</li>
-            <li>Reduced direct database query load by 30% by implementing multi-layer Redis caching, improving cloud infrastructure cost efficiency.</li>
-            <li>Improved reliability and maintainability by standardizing validations, error handling, and service-layer abstractions for APIs.</li>
-            <li>Collaborated in reviews and debugging sessions to ship changes safely and reduce regressions.</li>
+          <ul class="mt-4 space-y-2 text-sm text-slate-700 list-disc pl-5">
+            <li>Increased team sprint velocity by 15% by delivering 12 production-ready features within 3 months through Agile/Scrum cycles.</li>
+            <li>Reduced direct database query load by 30% using a multi-layer Redis caching mechanism, improving cost efficiency.</li>
+            <li>Improved maintainability by standardizing request validation, error handling, and reusable service-layer logic for APIs.</li>
+            <li>Collaborated in reviews and debugging sessions to ship stable releases and reduce regressions.</li>
           </ul>
           <div class="mt-5 flex flex-wrap gap-2">
-            <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/70">Redis caching</span>
-            <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/70">Agile</span>
-            <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/70">Backend APIs</span>
+            <span class="rounded-full border border-slate-900/10 bg-white px-3 py-1 text-xs text-slate-700">Redis caching</span>
+            <span class="rounded-full border border-slate-900/10 bg-white px-3 py-1 text-xs text-slate-700">Agile</span>
+            <span class="rounded-full border border-slate-900/10 bg-white px-3 py-1 text-xs text-slate-700">Backend APIs</span>
           </div>
         </article>
 
         <!-- Queuify -->
-        <article class="glass rounded-3xl p-6 border border-white/10 exp-card">
+        <article class="glass soft-shadow rounded-3xl p-6 border border-slate-900/10 exp-card">
           <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2">
             <h3 class="text-lg font-semibold">Queuify — Machine Learning Engineer Intern</h3>
-            <p class="text-sm text-white/55">Feb 2024 – Jul 2024</p>
+            <p class="text-sm text-slate-500">Feb 2024 – Jul 2024</p>
           </div>
-          <p class="mt-3 text-sm text-white/65">
-            Built ML pipelines and improved model quality using practical experimentation and fine-tuning.
+          <p class="mt-3 text-sm text-slate-600">
+            Built end-to-end ML pipelines, improved predictive accuracy, and strengthened model training/evaluation workflows.
           </p>
-          <ul class="mt-4 space-y-2 text-sm text-white/70 list-disc pl-5">
-            <li>Achieved 85% validation accuracy by building end-to-end ML pipelines using TensorFlow and scikit-learn.</li>
-            <li>Improved model performance by 20% for core business cases via transfer learning and iterative tuning.</li>
-            <li>Aligned model evaluation with stakeholder goals by defining measurable metrics and validating improvements on real use cases.</li>
+          <ul class="mt-4 space-y-2 text-sm text-slate-700 list-disc pl-5">
+            <li>Built end-to-end ML pipelines using TensorFlow and scikit-learn and achieved 85% validation accuracy on predictive models.</li>
+            <li>Improved model performance by 20% for core business cases by fine-tuning deep learning architectures using transfer learning.</li>
+            <li>Worked on dataset preparation and feature preprocessing to stabilize training and improve generalization across validation splits.</li>
+            <li>Designed repeatable experimentation workflows (training + evaluation) to compare model variants and track improvements over time.</li>
+            <li>Applied an engineering mindset to ML delivery: reproducible runs, clear metrics, and clean model interfaces for downstream usage.</li>
+            <li>Leveraged GenAI ecosystem familiarity (HuggingFace, OpenAI APIs, RAG concepts from other projects) to communicate effectively on AI-related product requirements.</li>
           </ul>
           <div class="mt-5 flex flex-wrap gap-2">
-            <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/70">TensorFlow</span>
-            <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/70">scikit-learn</span>
-            <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/70">Transfer Learning</span>
+            <span class="rounded-full border border-slate-900/10 bg-white px-3 py-1 text-xs text-slate-700">TensorFlow</span>
+            <span class="rounded-full border border-slate-900/10 bg-white px-3 py-1 text-xs text-slate-700">scikit-learn</span>
+            <span class="rounded-full border border-slate-900/10 bg-white px-3 py-1 text-xs text-slate-700">Transfer Learning</span>
+            <span class="rounded-full border border-slate-900/10 bg-white px-3 py-1 text-xs text-slate-700">ML pipelines</span>
           </div>
         </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS (moved before projects) -->
+  <section id="skills" class="py-10">
+    <div class="mx-auto max-w-6xl px-5">
+      <p class="text-xs uppercase tracking-[0.22em] text-slate-500">Toolkit</p>
+      <h2 class="mt-2 text-2xl md:text-3xl font-semibold">Skills</h2>
+
+      <div class="mt-6 grid md:grid-cols-2 gap-4">
+        <div class="glass soft-shadow rounded-3xl p-6 border border-slate-900/10 skill-card">
+          <h3 class="text-sm font-semibold text-slate-800">Backend engineering</h3>
+          <p class="mt-3 text-sm text-slate-700">
+            Python · Django/DRF · FastAPI · Celery · Flask · REST APIs · JWT · RBAC
+          </p>
+          <p class="mt-3 text-sm text-slate-600">
+            Focus: scalable API design, request validation, middleware patterns, and production debugging.
+          </p>
+        </div>
+
+        <div class="glass soft-shadow rounded-3xl p-6 border border-slate-900/10 skill-card">
+          <h3 class="text-sm font-semibold text-slate-800">Database & caching</h3>
+          <p class="mt-3 text-sm text-slate-700">
+            PostgreSQL (query optimization, indexing) · Redis (caching patterns, rate limiting)
+          </p>
+          <p class="mt-3 text-sm text-slate-600">
+            Focus: reduce DB load, improve response time, handle traffic spikes with resilient caching strategies.
+          </p>
+        </div>
+
+        <div class="glass soft-shadow rounded-3xl p-6 border border-slate-900/10 skill-card">
+          <h3 class="text-sm font-semibold text-slate-800">GenAI engineering</h3>
+          <p class="mt-3 text-sm text-slate-700">
+            LangChain · LangGraph · OpenAI API · HuggingFace · RAG Pipelines · Ollama
+          </p>
+          <p class="mt-3 text-sm text-slate-600">
+            Focus: agentic workflows, prompt/flow design, structured outputs, and reliability via evaluation loops.
+          </p>
+        </div>
+
+        <div class="glass soft-shadow rounded-3xl p-6 border border-slate-900/10 skill-card">
+          <h3 class="text-sm font-semibold text-slate-800">ML + tools</h3>
+          <p class="mt-3 text-sm text-slate-700">
+            TensorFlow · scikit-learn · Transfer Learning · AWS · Docker · Git/GitHub · Postman
+          </p>
+          <p class="mt-3 text-sm text-slate-600">
+            Focus: reproducible pipelines, deployment-ready interfaces, and clean developer workflow.
+          </p>
+        </div>
       </div>
     </div>
   </section>
@@ -272,78 +328,48 @@
   <!-- PROJECTS -->
   <section id="projects" class="py-10">
     <div class="mx-auto max-w-6xl px-5">
-      <p class="text-xs uppercase tracking-[0.22em] text-white/50">Build</p>
+      <p class="text-xs uppercase tracking-[0.22em] text-slate-500">Build</p>
       <h2 class="mt-2 text-2xl md:text-3xl font-semibold">Projects</h2>
 
       <div class="mt-6 grid md:grid-cols-3 gap-4">
-        <article class="glass rounded-3xl p-6 border border-white/10 proj-card">
+        <article class="glass soft-shadow rounded-3xl p-6 border border-slate-900/10 proj-card">
           <h3 class="text-lg font-semibold">DocuMind</h3>
-          <p class="mt-1 text-sm text-white/55">Django · Celery · Llama‑3</p>
-          <p class="mt-3 text-sm text-white/70 leading-relaxed">
+          <p class="mt-1 text-sm text-slate-500">Django · Celery · Llama‑3</p>
+          <p class="mt-3 text-sm text-slate-700 leading-relaxed">
             SaaS document intelligence platform for summarization and entity extraction with concurrent file processing.
           </p>
-          <ul class="mt-4 space-y-2 text-sm text-white/70 list-disc pl-5">
-            <li>Multi-tenant backend handling 50+ concurrent file-processing jobs.</li>
-            <li>Contract summarization + entity extraction using Llama‑3.</li>
-            <li>Reduced manual review by 90% (8 hours → 30 minutes) by automating the workflow.</li>
+          <ul class="mt-4 space-y-2 text-sm text-slate-700 list-disc pl-5">
+            <li>Multi-tenant SaaS backend handling 50+ concurrent file processing.</li>
+            <li>Llama‑3 contract summarization + entity extraction.</li>
+            <li>Reduced manual review time by 90% (8 hours → 30 minutes).</li>
           </ul>
         </article>
 
-        <article class="glass rounded-3xl p-6 border border-white/10 proj-card">
+        <article class="glass soft-shadow rounded-3xl p-6 border border-slate-900/10 proj-card">
           <h3 class="text-lg font-semibold">Agentic Workflow Automation</h3>
-          <p class="mt-1 text-sm text-white/55">Python · LangGraph · OpenAI</p>
-          <p class="mt-3 text-sm text-white/70 leading-relaxed">
+          <p class="mt-1 text-sm text-slate-500">Python · LangGraph · OpenAI</p>
+          <p class="mt-3 text-sm text-slate-700 leading-relaxed">
             Autonomous agent to execute multi-step workflows with a quality loop to reduce errors.
           </p>
-          <ul class="mt-4 space-y-2 text-sm text-white/70 list-disc pl-5">
-            <li>Agent runs Search → Analyze → Report without human intervention.</li>
-            <li>Reduced hallucinations by 60% with a self-reflection loop that critiques and refines outputs.</li>
-            <li>Produces structured final outputs suitable for downstream consumption.</li>
+          <ul class="mt-4 space-y-2 text-sm text-slate-700 list-disc pl-5">
+            <li>Runs Search → Analyze → Report without human intervention.</li>
+            <li>Reduced hallucinations by 60% using a self-reflection loop.</li>
+            <li>Structured final output for downstream consumption.</li>
           </ul>
         </article>
 
-        <article class="glass rounded-3xl p-6 border border-white/10 proj-card">
+        <article class="glass soft-shadow rounded-3xl p-6 border border-slate-900/10 proj-card">
           <h3 class="text-lg font-semibold">Distributed Inventory API</h3>
-          <p class="mt-1 text-sm text-white/55">DRF · Redis · Docker · PostgreSQL</p>
-          <p class="mt-3 text-sm text-white/70 leading-relaxed">
+          <p class="mt-1 text-sm text-slate-500">DRF · Redis · Docker · PostgreSQL</p>
+          <p class="mt-3 text-sm text-slate-700 leading-relaxed">
             High-concurrency REST API designed for low-latency performance and secure access control.
           </p>
-          <ul class="mt-4 space-y-2 text-sm text-white/70 list-disc pl-5">
-            <li>Maintained sub-100ms latency under load using Redis caching.</li>
+          <ul class="mt-4 space-y-2 text-sm text-slate-700 list-disc pl-5">
+            <li>Sub-100ms latency under high load using Redis caching.</li>
             <li>JWT-based RBAC for sensitive endpoints.</li>
-            <li>100% test coverage for critical transaction workflows using PyTest.</li>
+            <li>100% test coverage for critical workflows using PyTest.</li>
           </ul>
         </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- SKILLS -->
-  <section id="skills" class="py-10">
-    <div class="mx-auto max-w-6xl px-5">
-      <p class="text-xs uppercase tracking-[0.22em] text-white/50">Toolkit</p>
-      <h2 class="mt-2 text-2xl md:text-3xl font-semibold">Skills</h2>
-
-      <div class="mt-6 grid md:grid-cols-2 gap-4">
-        <div class="glass rounded-3xl p-6 border border-white/10">
-          <h3 class="text-sm font-semibold text-white/80">Backend engineering</h3>
-          <p class="mt-3 text-sm text-white/70">Python · Django/DRF · FastAPI · Celery · Flask · JWT/RBAC</p>
-        </div>
-
-        <div class="glass rounded-3xl p-6 border border-white/10">
-          <h3 class="text-sm font-semibold text-white/80">Database & caching</h3>
-          <p class="mt-3 text-sm text-white/70">PostgreSQL (optimization, indexing) · Redis (patterns, caching, rate limiting)</p>
-        </div>
-
-        <div class="glass rounded-3xl p-6 border border-white/10">
-          <h3 class="text-sm font-semibold text-white/80">GenAI / ML</h3>
-          <p class="mt-3 text-sm text-white/70">LangChain · LangGraph · OpenAI API · HuggingFace · RAG Pipelines · Ollama · TensorFlow</p>
-        </div>
-
-        <div class="glass rounded-3xl p-6 border border-white/10">
-          <h3 class="text-sm font-semibold text-white/80">Tools & platforms</h3>
-          <p class="mt-3 text-sm text-white/70">AWS · Docker · Git/GitHub · Postman</p>
-        </div>
       </div>
     </div>
   </section>
@@ -351,19 +377,19 @@
   <!-- EDUCATION + ACHIEVEMENTS -->
   <section id="education" class="py-10">
     <div class="mx-auto max-w-6xl px-5">
-      <p class="text-xs uppercase tracking-[0.22em] text-white/50">Background</p>
+      <p class="text-xs uppercase tracking-[0.22em] text-slate-500">Background</p>
       <h2 class="mt-2 text-2xl md:text-3xl font-semibold">Education & Achievements</h2>
 
       <div class="mt-6 grid md:grid-cols-3 gap-4">
-        <div class="glass rounded-3xl p-6 border border-white/10 md:col-span-2">
+        <div class="glass soft-shadow rounded-3xl p-6 border border-slate-900/10 md:col-span-2 edu-card">
           <h3 class="text-lg font-semibold">Maulana Azad National Urdu University, Hyderabad</h3>
-          <p class="mt-1 text-sm text-white/55">B.Tech in Computer Science · Jul 2021 – Apr 2025</p>
-          <p class="mt-4 text-sm text-white/70">CGPA: 8.54 / 10.0</p>
+          <p class="mt-1 text-sm text-slate-500">B.Tech in Computer Science · Jul 2021 – Apr 2025</p>
+          <p class="mt-4 text-sm text-slate-700">CGPA: 8.54 / 10.0</p>
         </div>
 
-        <div class="glass rounded-3xl p-6 border border-white/10">
-          <h3 class="text-sm font-semibold text-white/80">Highlights</h3>
-          <ul class="mt-3 space-y-2 text-sm text-white/70 list-disc pl-5">
+        <div class="glass soft-shadow rounded-3xl p-6 border border-slate-900/10 edu-card">
+          <h3 class="text-sm font-semibold text-slate-800">Highlights</h3>
+          <ul class="mt-3 space-y-2 text-sm text-slate-700 list-disc pl-5">
             <li>230+ DSA problems solved (LeetCode).</li>
             <li>LeetCode contest rating: 1,649.</li>
             <li>Machine Learning Specialization (Stanford).</li>
@@ -377,26 +403,26 @@
   <!-- CONTACT -->
   <section id="contact" class="py-14">
     <div class="mx-auto max-w-6xl px-5">
-      <div class="glass rounded-3xl p-7 md:p-10 border border-white/10">
-        <p class="text-xs uppercase tracking-[0.22em] text-white/50">Reach out</p>
+      <div class="glass soft-shadow rounded-3xl p-7 md:p-10 border border-slate-900/10 contact-card">
+        <p class="text-xs uppercase tracking-[0.22em] text-slate-500">Reach out</p>
         <h2 class="mt-2 text-2xl md:text-3xl font-semibold">Contact</h2>
-        <p class="mt-4 text-white/70 leading-relaxed">
+        <p class="mt-4 text-slate-700 leading-relaxed">
           Open to backend engineering roles and GenAI/backend product work. Best way to reach out is email or LinkedIn.
         </p>
 
         <div class="mt-6 flex flex-wrap gap-3">
-          <a class="rounded-2xl px-5 py-3 text-sm font-semibold bg-white text-black hover:bg-white/90"
+          <a class="rounded-2xl px-5 py-3 text-sm font-semibold bg-slate-900 text-white hover:bg-slate-800"
              href="mailto:muazzamali741@gmail.com">Email</a>
-          <a class="rounded-2xl px-5 py-3 text-sm font-semibold bg-white/10 hover:bg-white/15 border border-white/10"
+          <a class="rounded-2xl px-5 py-3 text-sm font-semibold bg-white hover:bg-slate-50 border border-slate-900/10"
              target="_blank" rel="noopener" href="https://linkedin.com/in/muazzamofficial">LinkedIn</a>
-          <a class="rounded-2xl px-5 py-3 text-sm font-semibold bg-white/10 hover:bg-white/15 border border-white/10"
+          <a class="rounded-2xl px-5 py-3 text-sm font-semibold bg-white hover:bg-slate-50 border border-slate-900/10"
              target="_blank" rel="noopener" href="https://github.com/Muazzam741">GitHub</a>
-          <a class="rounded-2xl px-5 py-3 text-sm font-semibold bg-violet-500/90 hover:bg-violet-500 text-white"
+          <a class="rounded-2xl px-5 py-3 text-sm font-semibold bg-violet-600 hover:bg-violet-700 text-white"
              href="Muazzam_Ali_Resume.pdf" target="_blank" rel="noopener">Resume</a>
         </div>
       </div>
 
-      <footer class="py-10 text-center text-xs text-white/45">
+      <footer class="py-10 text-center text-xs text-slate-500">
         © <span id="year"></span> Muazzam Ali · Built with Tailwind + GSAP + tsParticles · Hosted on GitHub Pages
       </footer>
     </div>
@@ -406,68 +432,60 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 
-  <!-- tsParticles (CDN bundle) -->
+  <!-- tsParticles -->
   <script src="https://cdn.jsdelivr.net/npm/tsparticles@3/tsparticles.bundle.min.js"></script>
 
   <script>
-    // Year
     document.getElementById("year").textContent = new Date().getFullYear();
 
-    // Particles background (tsParticles CDN bundle autoloads full preset per docs)
-    // Keep it subtle: low opacity, slow movement
+    // Light, subtle particles (works well on white background)
     tsParticles.load("tsparticles", {
       fullScreen: { enable: true, zIndex: -20 },
       background: { color: { value: "transparent" } },
       fpsLimit: 60,
       interactivity: {
-        events: {
-          onHover: { enable: true, mode: "repulse" },
-          resize: true
-        },
-        modes: { repulse: { distance: 90, duration: 0.3 } }
+        events: { onHover: { enable: true, mode: "repulse" }, resize: true },
+        modes: { repulse: { distance: 90, duration: 0.25 } }
       },
       particles: {
-        color: { value: ["#a78bfa", "#22c55e", "#60a5fa"] },
-        links: {
-          enable: true,
-          color: "#a78bfa",
-          opacity: 0.15,
-          distance: 140
-        },
-        move: { enable: true, speed: 0.7, outModes: { default: "out" } },
-        number: { value: 55, density: { enable: true, area: 900 } },
-        opacity: { value: 0.35 },
+        color: { value: ["#7c3aed", "#06b6d4", "#22c55e"] },
+        links: { enable: true, color: "#7c3aed", opacity: 0.14, distance: 150 },
+        move: { enable: true, speed: 0.65, outModes: { default: "out" } },
+        number: { value: 50, density: { enable: true, area: 900 } },
+        opacity: { value: 0.32 },
         shape: { type: "circle" },
         size: { value: { min: 1, max: 3 } }
       },
       detectRetina: true
     });
 
-    // GSAP animations
+    // GSAP scroll animations (subtle for light theme)
     gsap.registerPlugin(ScrollTrigger);
 
-    // Hero entrance
-    gsap.from("header", { y: -20, opacity: 0, duration: 0.6, ease: "power2.out" });
-    gsap.from(".glow", { y: 18, opacity: 0, duration: 0.9, ease: "power3.out", delay: 0.15 });
+    gsap.from("header", { y: -16, opacity: 0, duration: 0.5, ease: "power2.out" });
+    gsap.from(".soft-shadow", { y: 16, opacity: 0, duration: 0.8, ease: "power3.out", delay: 0.1 });
 
-    // Section reveal (cards)
     const reveal = (selector) => {
       gsap.utils.toArray(selector).forEach((el) => {
         gsap.fromTo(el,
-          { y: 22, opacity: 0 },
+          { y: 16, opacity: 0 },
           {
             y: 0,
             opacity: 1,
-            duration: 0.7,
+            duration: 0.6,
             ease: "power2.out",
-            scrollTrigger: { trigger: el, start: "top 85%" }
+            scrollTrigger: { trigger: el, start: "top 88%" }
           }
         );
       });
     };
 
+    reveal(".about-card");
     reveal(".exp-card");
+    reveal(".skill-card");
     reveal(".proj-card");
+    reveal(".edu-card");
+    reveal(".contact-card");
   </script>
 </body>
 </html>
