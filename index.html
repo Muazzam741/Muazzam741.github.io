@@ -1,10 +1,12 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Muazzam Ali | Backend Engineer — GenAI Specialist</title>
-  <meta name="description" content="Muazzam Ali — Backend Engineer & GenAI Specialist. Django/DRF, PostgreSQL optimization, Redis caching/rate limiting, RAG + agentic workflows." />
+  <meta name="description"
+    content="Muazzam Ali — Backend Engineer & GenAI Specialist. Django/DRF, PostgreSQL optimization, Redis caching/rate limiting, RAG + agentic workflows." />
   <meta name="theme-color" content="#0b1220" />
 
   <!-- Tailwind via Play CDN -->
@@ -12,24 +14,33 @@
 
   <style>
     /* Lighter "dark" theme (navy + zinc), still modern */
-    :root { color-scheme: dark; }
-    body { background: #0b1220; } /* slightly lighter than zinc-950 */
+    :root {
+      color-scheme: dark;
+    }
+
+    body {
+      background: #0b1220;
+    }
+
+    /* slightly lighter than zinc-950 */
 
     .glass {
-      background: rgba(24, 24, 27, 0.60);   /* zinc-900 */
-      border: 1px solid rgba(255,255,255,0.10);
+      background: rgba(24, 24, 27, 0.60);
+      /* zinc-900 */
+      border: 1px solid rgba(255, 255, 255, 0.10);
       backdrop-filter: blur(14px);
     }
 
     .soft-shadow {
       box-shadow:
-        0 0 0 1px rgba(255,255,255,0.06),
-        0 22px 70px rgba(0,0,0,0.45);
+        0 0 0 1px rgba(255, 255, 255, 0.06),
+        0 22px 70px rgba(0, 0, 0, 0.45);
     }
 
     /* Modern accent gradient */
     .grad-text {
-      background: linear-gradient(90deg, #93c5fd, #a78bfa); /* blue-300 -> violet-400 */
+      background: linear-gradient(90deg, #93c5fd, #a78bfa);
+      /* blue-300 -> violet-400 */
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
@@ -37,24 +48,63 @@
 
     .grid-lines {
       background-image:
-        linear-gradient(to right, rgba(255,255,255,0.06) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(255,255,255,0.06) 1px, transparent 1px);
+        linear-gradient(to right, rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
       background-size: 64px 64px;
-      mask-image: radial-gradient(ellipse at top, rgba(0,0,0,0.92), transparent 70%);
+      mask-image: radial-gradient(ellipse at top, rgba(0, 0, 0, 0.92), transparent 70%);
       opacity: .16;
     }
 
-    .ring-soft { box-shadow: 0 0 0 1px rgba(255,255,255,0.08); }
-    ::selection { background: rgba(147,197,253,0.26); } /* blue */
+    .ring-soft {
+      box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.08);
+    }
+
+    ::selection {
+      background: rgba(147, 197, 253, 0.26);
+    }
+
+    /* blue */
 
     /* Make "linked cards" feel clickable */
-    .card-link { display: block; }
-    .card-link:focus-visible { outline: 2px solid rgba(147,197,253,0.8); outline-offset: 3px; border-radius: 24px; }
+    .card-link {
+      display: block;
+    }
+
+    .card-link:focus-visible {
+      outline: 2px solid rgba(147, 197, 253, 0.8);
+      outline-offset: 3px;
+      border-radius: 24px;
+    }
+
+    /* Custom Cursor */
+    #cursor {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 20px;
+      height: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 9999;
+      transform: translate(-50%, -50%);
+      transition: width 0.3s, height 0.3s, background-color 0.3s, border-color 0.3s;
+      mix-blend-mode: difference;
+    }
+
+    #cursor.hovered {
+      width: 50px;
+      height: 50px;
+      background-color: rgba(255, 255, 255, 0.1);
+      border-color: transparent;
+      backdrop-filter: blur(2px);
+    }
   </style>
 </head>
 
 <body class="text-zinc-100 overflow-x-hidden">
   <!-- Background -->
+  <div id="cursor"></div>
   <div id="tsparticles" class="fixed inset-0 -z-20"></div>
   <div class="fixed inset-0 -z-10 grid-lines"></div>
 
@@ -76,11 +126,11 @@
 
       <div class="flex items-center gap-2">
         <a href="Muazzam_Ali_Resume_December_.pdf" target="_blank" rel="noopener"
-           class="hidden sm:inline-flex items-center gap-2 rounded-xl px-4 py-2 text-sm font-medium bg-white/10 hover:bg-white/15 border border-white/10">
+          class="hidden sm:inline-flex items-center gap-2 rounded-xl px-4 py-2 text-sm font-medium bg-white/10 hover:bg-white/15 border border-white/10">
           Resume
         </a>
         <a href="#contact"
-           class="inline-flex items-center gap-2 rounded-xl px-4 py-2 text-sm font-semibold bg-indigo-500 hover:bg-indigo-600 text-white">
+          class="inline-flex items-center gap-2 rounded-xl px-4 py-2 text-sm font-semibold bg-indigo-500 hover:bg-indigo-600 text-white magnetic-btn">
           Contact
         </a>
       </div>
@@ -97,51 +147,59 @@
               Software Engineer | Backend | GenAI | LLMs | RAG | Core ML
             </p>
 
-            <h1 class="mt-4 text-4xl md:text-6xl font-semibold leading-[1.02]">
-              Shipping <span class="grad-text">fast APIs</span> and<br class="hidden md:block" />
-              reliable GenAI workflows.
+            <h1 class="mt-4 text-4xl md:text-6xl font-semibold leading-[1.02] min-h-[3em] md:min-h-[2.5em]">
+              Shipping <br class="hidden md:block" />
+              <span id="typed-output" class="grad-text"></span>
             </h1>
 
             <p class="mt-5 text-white/70 text-base md:text-lg leading-relaxed">
-              Backend Engineer with experience building high-concurrency systems handling 5x traffic spikes and autonomous AI agents
-              reducing manual work by 90%. Proven: 25% latency reduction, 30% cost optimization, production-grade REST APIs,
+              Backend Engineer with experience building high-concurrency systems handling 5x traffic spikes and
+              autonomous AI agents
+              reducing manual work by 90%. Proven: 25% latency reduction, 30% cost optimization, production-grade REST
+              APIs,
               and resilient caching strategies.
             </p>
 
             <div class="mt-7 flex flex-wrap gap-3">
               <a href="Muazzam_Ali_Resume_December_.pdf" target="_blank" rel="noopener"
-                 class="inline-flex items-center justify-center rounded-2xl px-5 py-3 text-sm font-semibold bg-white text-black hover:bg-white/90">
+                class="inline-flex items-center justify-center rounded-2xl px-5 py-3 text-sm font-semibold bg-white text-black hover:bg-white/90 magnetic-btn">
                 View Resume
               </a>
 
               <a href="https://github.com/Muazzam741" target="_blank" rel="noopener"
-                 class="inline-flex items-center justify-center rounded-2xl px-5 py-3 text-sm font-semibold bg-white/10 hover:bg-white/15 border border-white/10">
+                class="inline-flex items-center justify-center rounded-2xl px-5 py-3 text-sm font-semibold bg-white/10 hover:bg-white/15 border border-white/10 magnetic-btn">
                 GitHub
               </a>
 
               <a href="https://leetcode.com/u/MuazzamAli/" target="_blank" rel="noopener"
-                 class="inline-flex items-center justify-center rounded-2xl px-5 py-3 text-sm font-semibold bg-white/10 hover:bg-white/15 border border-white/10">
+                class="inline-flex items-center justify-center rounded-2xl px-5 py-3 text-sm font-semibold bg-white/10 hover:bg-white/15 border border-white/10 magnetic-btn">
                 LeetCode
               </a>
 
               <a href="https://linkedin.com/in/muazzamofficial" target="_blank" rel="noopener"
-                 class="inline-flex items-center justify-center rounded-2xl px-5 py-3 text-sm font-semibold bg-white/10 hover:bg-white/15 border border-white/10">
+                class="inline-flex items-center justify-center rounded-2xl px-5 py-3 text-sm font-semibold bg-white/10 hover:bg-white/15 border border-white/10 magnetic-btn">
                 LinkedIn
               </a>
 
               <a href="mailto:muazzamali741@gmail.com"
-                 class="inline-flex items-center justify-center rounded-2xl px-5 py-3 text-sm font-semibold bg-white/10 hover:bg-white/15 border border-white/10">
+                class="inline-flex items-center justify-center rounded-2xl px-5 py-3 text-sm font-semibold bg-white/10 hover:bg-white/15 border border-white/10 magnetic-btn">
                 Email
               </a>
             </div>
 
             <div class="mt-8 flex flex-wrap gap-2">
-              <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/70">25% latency reduction</span>
-              <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/70">10,000+ daily users</span>
-              <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/70">5x traffic spikes</span>
-              <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/70">30% DB load reduction</span>
-              <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/70">90% manual work reduced</span>
-              <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/70">60% fewer hallucinations</span>
+              <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/70">25% latency
+                reduction</span>
+              <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/70">10,000+ daily
+                users</span>
+              <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/70">5x traffic
+                spikes</span>
+              <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/70">30% DB load
+                reduction</span>
+              <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/70">90% manual
+                work reduced</span>
+              <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/70">60% fewer
+                hallucinations</span>
             </div>
           </div>
 
@@ -158,20 +216,24 @@
               </div>
               <div class="flex items-center justify-between gap-4">
                 <span class="text-white/50">GitHub</span>
-                <a class="hover:text-white" target="_blank" rel="noopener" href="https://github.com/Muazzam741">Muazzam741</a>
+                <a class="hover:text-white" target="_blank" rel="noopener"
+                  href="https://github.com/Muazzam741">Muazzam741</a>
               </div>
               <div class="flex items-center justify-between gap-4">
                 <span class="text-white/50">LeetCode</span>
-                <a class="hover:text-white" target="_blank" rel="noopener" href="https://leetcode.com/u/MuazzamAli/">MuazzamAli</a>
+                <a class="hover:text-white" target="_blank" rel="noopener"
+                  href="https://leetcode.com/u/MuazzamAli/">MuazzamAli</a>
               </div>
               <div class="flex items-center justify-between gap-4">
                 <span class="text-white/50">LinkedIn</span>
-                <a class="hover:text-white" target="_blank" rel="noopener" href="https://linkedin.com/in/muazzamofficial">muazzamofficial</a>
+                <a class="hover:text-white" target="_blank" rel="noopener"
+                  href="https://linkedin.com/in/muazzamofficial">muazzamofficial</a>
               </div>
 
               <div class="pt-3 border-t border-white/10">
                 <p class="text-xs text-white/55 leading-relaxed">
-                  Focus: Django/DRF + PostgreSQL optimization, Redis caching/rate limiting, and GenAI workflows (agents + RAG).
+                  Focus: Django/DRF + PostgreSQL optimization, Redis caching/rate limiting, and GenAI workflows (agents
+                  + RAG).
                 </p>
               </div>
             </div>
@@ -194,11 +256,14 @@
             PostgreSQL optimization (query tuning + indexing), and Redis (caching + rate limiting).
           </p>
           <p class="mt-4 text-white/70 leading-relaxed">
-            Also builds GenAI systems such as autonomous agents and document intelligence workflows using LangChain/LangGraph,
-            OpenAI APIs, HuggingFace, and RAG pipelines—aiming for structured outputs, reliability, and measurable business impact.
+            Also builds GenAI systems such as autonomous agents and document intelligence workflows using
+            LangChain/LangGraph,
+            OpenAI APIs, HuggingFace, and RAG pipelines—aiming for structured outputs, reliability, and measurable
+            business impact.
           </p>
           <p class="mt-4 text-white/70 leading-relaxed">
-            Works closely with cross-functional teams to clarify requirements, validate edge cases, and deliver the functionality
+            Works closely with cross-functional teams to clarify requirements, validate edge cases, and deliver the
+            functionality
             as required with predictable releases.
           </p>
         </div>
@@ -232,17 +297,25 @@
             Backend ownership across APIs, performance optimization, caching/rate limiting, and security hardening.
           </p>
           <ul class="mt-4 space-y-2 text-sm text-white/70 list-disc pl-5">
-            <li>Reduced API latency by 25% for 10,000+ daily users by building 15+ DRF endpoints and optimizing complex PostgreSQL queries.</li>
-            <li>Optimized Django ORM query execution to reduce unnecessary DB hits and improve response time on critical flows (query count reduction, better access patterns).</li>
-            <li>Enabled the system to handle 5x traffic spikes during peak loads with a Redis-based sliding-window rate limiter and caching strategy, improving response times by 40%.</li>
-            <li>Implemented strict domain whitelisting and IP-based access control middleware, significantly hardening the API security posture.</li>
-            <li>Worked closely with product/QA/dependent teams to align functionality, confirm edge cases, and deliver features end-to-end.</li>
+            <li>Reduced API latency by 25% for 10,000+ daily users by building 15+ DRF endpoints and optimizing complex
+              PostgreSQL queries.</li>
+            <li>Optimized Django ORM query execution to reduce unnecessary DB hits and improve response time on critical
+              flows (query count reduction, better access patterns).</li>
+            <li>Enabled the system to handle 5x traffic spikes during peak loads with a Redis-based sliding-window rate
+              limiter and caching strategy, improving response times by 40%.</li>
+            <li>Implemented strict domain whitelisting and IP-based access control middleware, significantly hardening
+              the API security posture.</li>
+            <li>Worked closely with product/QA/dependent teams to align functionality, confirm edge cases, and deliver
+              features end-to-end.</li>
           </ul>
           <div class="mt-5 flex flex-wrap gap-2">
-            <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/70">Django REST Framework</span>
-            <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/70">PostgreSQL</span>
+            <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/70">Django REST
+              Framework</span>
+            <span
+              class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/70">PostgreSQL</span>
             <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/70">Redis</span>
-            <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/70">API Security</span>
+            <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/70">API
+              Security</span>
           </div>
         </article>
 
@@ -255,15 +328,20 @@
             Shipped production features while improving caching efficiency and database performance.
           </p>
           <ul class="mt-4 space-y-2 text-sm text-white/70 list-disc pl-5">
-            <li>Increased team sprint velocity by 15% by delivering 12 production-ready features within 3 months through Agile/Scrum cycles.</li>
-            <li>Reduced direct database query load by 30% using a multi-layer Redis caching mechanism, improving cost efficiency.</li>
-            <li>Improved maintainability by standardizing request validation, error handling, and reusable service-layer logic for APIs.</li>
+            <li>Increased team sprint velocity by 15% by delivering 12 production-ready features within 3 months through
+              Agile/Scrum cycles.</li>
+            <li>Reduced direct database query load by 30% using a multi-layer Redis caching mechanism, improving cost
+              efficiency.</li>
+            <li>Improved maintainability by standardizing request validation, error handling, and reusable service-layer
+              logic for APIs.</li>
             <li>Collaborated in reviews and debugging sessions to ship stable releases and reduce regressions.</li>
           </ul>
           <div class="mt-5 flex flex-wrap gap-2">
-            <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/70">Redis caching</span>
+            <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/70">Redis
+              caching</span>
             <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/70">Agile</span>
-            <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/70">Backend APIs</span>
+            <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/70">Backend
+              APIs</span>
           </div>
         </article>
 
@@ -273,23 +351,36 @@
             <p class="text-sm text-white/55">Feb 2024 – Jul 2024</p>
           </div>
           <p class="mt-3 text-sm text-white/60">
-            Built end-to-end ML pipelines, improved predictive accuracy, and strengthened model training/evaluation workflows.
+            Built end-to-end ML pipelines, improved predictive accuracy, and strengthened model training/evaluation
+            workflows.
           </p>
           <ul class="mt-4 space-y-2 text-sm text-white/70 list-disc pl-5">
-            <li>Built end-to-end ML pipelines using TensorFlow and scikit-learn and achieved 85% validation accuracy on predictive models.</li>
-            <li>Improved model performance by 20% for core business cases by fine-tuning deep learning architectures using transfer learning.</li>
-            <li>Worked on dataset preparation and feature preprocessing to stabilize training and improve generalization across validation splits.</li>
-            <li>Designed repeatable experimentation workflows (training + evaluation) to compare model variants and track improvements over time.</li>
-            <li>Applied an engineering mindset to ML delivery: reproducible runs, clear metrics, and clean model interfaces for downstream usage.</li>
-            <li>Developed evaluation framework measuring precision, recall, F1-score, and business metrics (revenue impact), enabling data-driven model selection and deployment decisions.</li>
-            <li>Leveraged GenAI ecosystem familiarity (HuggingFace, OpenAI APIs, RAG concepts from other projects) to communicate effectively on AI-related product requirements.</li>
-            <li>Optimized model inference using ONNX Runtime and quantization techniques, reducing model size by 60% and inference time by 40% for edge deployment scenarios.</li>
+            <li>Built end-to-end ML pipelines using TensorFlow and scikit-learn and achieved 85% validation accuracy on
+              predictive models.</li>
+            <li>Improved model performance by 20% for core business cases by fine-tuning deep learning architectures
+              using transfer learning.</li>
+            <li>Worked on dataset preparation and feature preprocessing to stabilize training and improve generalization
+              across validation splits.</li>
+            <li>Designed repeatable experimentation workflows (training + evaluation) to compare model variants and
+              track improvements over time.</li>
+            <li>Applied an engineering mindset to ML delivery: reproducible runs, clear metrics, and clean model
+              interfaces for downstream usage.</li>
+            <li>Developed evaluation framework measuring precision, recall, F1-score, and business metrics (revenue
+              impact), enabling data-driven model selection and deployment decisions.</li>
+            <li>Leveraged GenAI ecosystem familiarity (HuggingFace, OpenAI APIs, RAG concepts from other projects) to
+              communicate effectively on AI-related product requirements.</li>
+            <li>Optimized model inference using ONNX Runtime and quantization techniques, reducing model size by 60% and
+              inference time by 40% for edge deployment scenarios.</li>
           </ul>
           <div class="mt-5 flex flex-wrap gap-2">
-            <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/70">TensorFlow</span>
-            <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/70">scikit-learn</span>
-            <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/70">Transfer Learning</span>
-            <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/70">ML pipelines</span>
+            <span
+              class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/70">TensorFlow</span>
+            <span
+              class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/70">scikit-learn</span>
+            <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/70">Transfer
+              Learning</span>
+            <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/70">ML
+              pipelines</span>
           </div>
         </article>
       </div>
@@ -352,7 +443,7 @@
               </p>
             </div>
             <a href="https://leetcode.com/u/MuazzamAli/" target="_blank" rel="noopener"
-               class="inline-flex items-center justify-center rounded-2xl px-5 py-3 text-sm font-semibold bg-white/10 hover:bg-white/15 border border-white/10">
+              class="inline-flex items-center justify-center rounded-2xl px-5 py-3 text-sm font-semibold bg-white/10 hover:bg-white/15 border border-white/10">
               View LeetCode
             </a>
           </div>
@@ -369,12 +460,14 @@
 
       <div class="mt-6 grid md:grid-cols-3 gap-4">
         <a class="card-link group" href="https://github.com/Muazzam741" target="_blank" rel="noopener"
-           aria-label="DocuMind project (opens GitHub)">
-          <article class="glass soft-shadow rounded-3xl p-6 border border-white/10 proj-card transition-transform duration-200 group-hover:-translate-y-1 group-hover:border-white/20">
+          aria-label="DocuMind project (opens GitHub)">
+          <article
+            class="glass soft-shadow rounded-3xl p-6 border border-white/10 proj-card transition-transform duration-200 group-hover:-translate-y-1 group-hover:border-white/20">
             <h3 class="text-lg font-semibold group-hover:text-white">DocuMind</h3>
             <p class="mt-1 text-sm text-white/55">Django · Celery · Llama‑3</p>
             <p class="mt-3 text-sm text-white/70 leading-relaxed">
-              SaaS document intelligence platform for summarization and entity extraction with concurrent file processing.
+              SaaS document intelligence platform for summarization and entity extraction with concurrent file
+              processing.
             </p>
             <ul class="mt-4 space-y-2 text-sm text-white/70 list-disc pl-5">
               <li>Multi-tenant SaaS backend handling 50+ concurrent file processing.</li>
@@ -386,8 +479,9 @@
         </a>
 
         <a class="card-link group" href="https://github.com/Muazzam741" target="_blank" rel="noopener"
-           aria-label="Agentic Workflow Automation project (opens GitHub)">
-          <article class="glass soft-shadow rounded-3xl p-6 border border-white/10 proj-card transition-transform duration-200 group-hover:-translate-y-1 group-hover:border-white/20">
+          aria-label="Agentic Workflow Automation project (opens GitHub)">
+          <article
+            class="glass soft-shadow rounded-3xl p-6 border border-white/10 proj-card transition-transform duration-200 group-hover:-translate-y-1 group-hover:border-white/20">
             <h3 class="text-lg font-semibold group-hover:text-white">Agentic Workflow Automation</h3>
             <p class="mt-1 text-sm text-white/55">Python · LangGraph · OpenAI</p>
             <p class="mt-3 text-sm text-white/70 leading-relaxed">
@@ -403,8 +497,9 @@
         </a>
 
         <a class="card-link group" href="https://github.com/Muazzam741" target="_blank" rel="noopener"
-           aria-label="Distributed Inventory API project (opens GitHub)">
-          <article class="glass soft-shadow rounded-3xl p-6 border border-white/10 proj-card transition-transform duration-200 group-hover:-translate-y-1 group-hover:border-white/20">
+          aria-label="Distributed Inventory API project (opens GitHub)">
+          <article
+            class="glass soft-shadow rounded-3xl p-6 border border-white/10 proj-card transition-transform duration-200 group-hover:-translate-y-1 group-hover:border-white/20">
             <h3 class="text-lg font-semibold group-hover:text-white">Distributed Inventory API</h3>
             <p class="mt-1 text-sm text-white/55">DRF · Redis · Docker · PostgreSQL</p>
             <p class="mt-3 text-sm text-white/70 leading-relaxed">
@@ -435,7 +530,7 @@
           </h3>
           <p class="mt-2 text-sm text-white/60">
             A central university recognized by UGC, accredited with 'A' grade by NAAC.
-            </p>
+          </p>
           <p class="mt-1 text-sm text-white/55">B.Tech in Computer Science · Jul 2021 – Apr 2025</p>
           <p class="mt-4 text-sm text-white/70">CGPA: 8.54 / 10.0</p>
         </div>
@@ -445,7 +540,7 @@
           <ul class="mt-3 space-y-2 text-sm text-white/70 list-disc pl-5">
             <li>
               <a class="underline underline-offset-2 hover:no-underline" target="_blank" rel="noopener"
-                 href="https://leetcode.com/u/MuazzamAli/">
+                href="https://leetcode.com/u/MuazzamAli/">
                 LeetCode profile: leetcode.com/u/MuazzamAli
               </a>
             </li>
@@ -470,16 +565,16 @@
         </p>
 
         <div class="mt-6 flex flex-wrap gap-3">
-          <a class="rounded-2xl px-5 py-3 text-sm font-semibold bg-white text-black hover:bg-white/90"
-             href="mailto:muazzamali741@gmail.com">Email</a>
-          <a class="rounded-2xl px-5 py-3 text-sm font-semibold bg-white/10 hover:bg-white/15 border border-white/10"
-             target="_blank" rel="noopener" href="https://linkedin.com/in/muazzamofficial">LinkedIn</a>
-          <a class="rounded-2xl px-5 py-3 text-sm font-semibold bg-white/10 hover:bg-white/15 border border-white/10"
-             target="_blank" rel="noopener" href="https://github.com/Muazzam741">GitHub</a>
-          <a class="rounded-2xl px-5 py-3 text-sm font-semibold bg-white/10 hover:bg-white/15 border border-white/10"
-             target="_blank" rel="noopener" href="https://leetcode.com/u/MuazzamAli/">LeetCode</a>
-          <a class="rounded-2xl px-5 py-3 text-sm font-semibold bg-indigo-500 hover:bg-indigo-600 text-white"
-             href="Muazzam_Ali_Resume_December_.pdf" target="_blank" rel="noopener">Resume</a>
+          <a class="rounded-2xl px-5 py-3 text-sm font-semibold bg-white text-black hover:bg-white/90 magnetic-btn"
+            href="mailto:muazzamali741@gmail.com">Email</a>
+          <a class="rounded-2xl px-5 py-3 text-sm font-semibold bg-white/10 hover:bg-white/15 border border-white/10 magnetic-btn"
+            target="_blank" rel="noopener" href="https://linkedin.com/in/muazzamofficial">LinkedIn</a>
+          <a class="rounded-2xl px-5 py-3 text-sm font-semibold bg-white/10 hover:bg-white/15 border border-white/10 magnetic-btn"
+            target="_blank" rel="noopener" href="https://github.com/Muazzam741">GitHub</a>
+          <a class="rounded-2xl px-5 py-3 text-sm font-semibold bg-white/10 hover:bg-white/15 border border-white/10 magnetic-btn"
+            target="_blank" rel="noopener" href="https://leetcode.com/u/MuazzamAli/">LeetCode</a>
+          <a class="rounded-2xl px-5 py-3 text-sm font-semibold bg-indigo-500 hover:bg-indigo-600 text-white magnetic-btn"
+            href="Muazzam_Ali_Resume_December_.pdf" target="_blank" rel="noopener">Resume</a>
         </div>
       </div>
 
@@ -489,9 +584,11 @@
     </div>
   </section>
 
-  <!-- Libraries: GSAP + ScrollTrigger -->
+  <!-- Libraries: GSAP + ScrollTrigger + Typed.js + VanillaTilt -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
 
   <!-- tsParticles -->
   <script src="https://cdn.jsdelivr.net/npm/tsparticles@3/tsparticles.bundle.min.js"></script>
@@ -547,6 +644,57 @@
     reveal(".proj-card");
     reveal(".edu-card");
     reveal(".contact-card");
+
+    // --- NEW: Typed.js ---
+    new Typed('#typed-output', {
+      strings: [
+        'fast APIs and reliable GenAI workflows.',
+        'scalable systems and autonomous agents.',
+        'production-grade APIs and RAG pipelines.'
+      ],
+      typeSpeed: 40,
+      backSpeed: 20,
+      backDelay: 2000,
+      loop: true
+    });
+
+    // --- NEW: VanillaTilt ---
+    // Apply tilt to all glass cards
+    VanillaTilt.init(document.querySelectorAll(".glass"), {
+      max: 5,
+      speed: 400,
+      glare: true,
+      "max-glare": 0.1,
+      gyroscope: false // save battery on mobile
+    });
+
+    // --- NEW: Magnetic Buttons ---
+    const magneticBtns = document.querySelectorAll(".magnetic-btn");
+    magneticBtns.forEach((btn) => {
+      btn.addEventListener("mousemove", (e) => {
+        const rect = btn.getBoundingClientRect();
+        const x = e.clientX - rect.left - rect.width / 2;
+        const y = e.clientY - rect.top - rect.height / 2;
+        gsap.to(btn, { x: x * 0.3, y: y * 0.3, duration: 0.3, ease: "power2.out" });
+      });
+      btn.addEventListener("mouseleave", () => {
+        gsap.to(btn, { x: 0, y: 0, duration: 0.8, ease: "elastic.out(1, 0.4)" });
+      });
+    });
+
+    // --- NEW: Custom Cursor ---
+    const cursor = document.getElementById("cursor");
+    document.addEventListener("mousemove", (e) => {
+      gsap.to(cursor, { x: e.clientX, y: e.clientY, duration: 0.1, ease: "power2.out" });
+    });
+
+    // Hover effect for links/buttons
+    const hoverElements = document.querySelectorAll("a, button, .card-link");
+    hoverElements.forEach((el) => {
+      el.addEventListener("mouseenter", () => cursor.classList.add("hovered"));
+      el.addEventListener("mouseleave", () => cursor.classList.remove("hovered"));
+    });
   </script>
 </body>
+
 </html>
